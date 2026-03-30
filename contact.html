@@ -115,25 +115,28 @@
         <div class="contact-form fade-up">
           <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Stuur een bericht</h2>
           <p style="color: var(--gray-light); margin-bottom: 2rem; font-size: 0.95rem;">Vertel ons over jouw project en we nemen zo snel mogelijk contact op.</p>
-          <form>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="3c3f644f-7f5b-46c3-853e-daf77dd2c29c">
+            <input type="hidden" name="subject" value="Nieuw contactformulier bericht – ONEMANCREW">
+            <input type="hidden" name="redirect" value="">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="name">Naam *</label>
-                <input type="text" id="name" class="form-input" placeholder="Jouw naam" required>
+                <input type="text" id="name" name="naam" class="form-input" placeholder="Jouw naam" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="email">E-mail *</label>
-                <input type="email" id="email" class="form-input" placeholder="jouw@email.nl" required>
+                <input type="email" id="email" name="email" class="form-input" placeholder="jouw@email.nl" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="phone">Telefoon</label>
-                <input type="tel" id="phone" class="form-input" placeholder="+31 6...">
+                <input type="tel" id="phone" name="telefoon" class="form-input" placeholder="+31 6...">
               </div>
               <div class="form-group">
                 <label class="form-label" for="service">Dienst</label>
-                <select id="service" class="form-select">
+                <select id="service" name="dienst" class="form-select">
                   <option value="" disabled selected>Selecteer een dienst</option>
                   <option value="promotievideo">Promotievideo</option>
                   <option value="aftermovie">Aftermovie</option>
@@ -147,11 +150,11 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="subject">Onderwerp *</label>
-              <input type="text" id="subject" class="form-input" placeholder="Kort omschrijving van jouw project" required>
+              <input type="text" id="subject" name="onderwerp" class="form-input" placeholder="Kort omschrijving van jouw project" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="message">Bericht *</label>
-              <textarea id="message" class="form-textarea" placeholder="Vertel ons meer over jouw project, wensen, budget en timeline..." required></textarea>
+              <textarea id="message" name="bericht" class="form-textarea" placeholder="Vertel ons meer over jouw project, wensen, budget en timeline..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 1.1rem;">
               Bericht Verzenden
