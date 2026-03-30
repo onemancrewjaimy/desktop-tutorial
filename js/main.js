@@ -132,17 +132,37 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Form submission ----
   const form = document.querySelector('.contact-form form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('[type=submit]');
-      const original = btn.textContent;
-      btn.textContent = 'Bericht verzonden!';
-      btn.style.background = '#22c55e';
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.style.background = '';
+      const originalHTML = btn.innerHTML;
+      btn.textContent = 'Verzenden...';
+      btn.disabled = true;
+
+      const data = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+
+      if (response.ok) {
+        btn.textContent = 'Bericht verzonden! ✓';
+        btn.style.background = '#22c55e';
         form.reset();
-      }, 3000);
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        btn.textContent = 'Er ging iets mis. Probeer opnieuw.';
+        btn.style.background = '#ef4444';
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      }
     });
   }
 
