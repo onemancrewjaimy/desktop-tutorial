@@ -166,4 +166,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---- Package Sliders ----
+  document.querySelectorAll('.packages__grid').forEach(slider => {
+    const dotsContainer = document.getElementById('dots' + slider.id.replace('slider', ''));
+    const cards = slider.querySelectorAll('.package-card');
+    if (!cards.length) return;
+
+    // Build dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Pakket ' + (i + 1));
+      dot.addEventListener('click', () => scrollToCard(i));
+      if (dotsContainer) dotsContainer.appendChild(dot);
+    });
+
+    function scrollToCard(index) {
+      const card = cards[index];
+      slider.scrollTo({ left: card.offsetLeft - slider.offsetLeft, behavior: 'smooth' });
+    }
+
+    function updateDots() {
+      if (!dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll('.slider-dot');
+      let closest = 0;
+      let minDist = Infinity;
+      cards.forEach((card, i) => {
+        const dist = Math.abs(card.offsetLeft - slider.offsetLeft - slider.scrollLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+    }
+
+    slider.addEventListener('scroll', updateDots, { passive: true });
+  });
+
+  // Arrow buttons
+  document.querySelectorAll('.slider-arrow').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const slider = document.getElementById(btn.dataset.slider);
+      if (!slider) return;
+      const card = slider.querySelector('.package-card');
+      const step = card ? card.offsetWidth + 20 : 320;
+      slider.scrollBy({ left: parseInt(btn.dataset.dir) * step, behavior: 'smooth' });
+    });
+  });
+
 });
