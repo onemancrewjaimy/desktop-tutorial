@@ -1033,14 +1033,22 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 
+.package-card__badge-type {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
 .package-card__name {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1rem;
 }
 
 .package-card__title {
@@ -1057,11 +1065,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .package-card__price {
   font-family: var(--font-heading);
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  color: var(--white);
+  color: var(--orange);
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .package-card__price span {
