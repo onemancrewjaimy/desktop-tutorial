@@ -106,6 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoModalClose = document.getElementById('videoModalClose');
   const videoModalBackdrop = document.getElementById('videoModalBackdrop');
 
+  // YouTube kaarten op homepage → open in nieuw tabblad
+  document.querySelectorAll('.portfolio-card[data-youtube]').forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-youtube');
+      window.open(`https://www.youtube.com/watch?v=${id}`, '_blank', 'noopener');
+    });
+  });
+
   if (videoModal && videoPlayer) {
     document.querySelectorAll('.portfolio-card[data-video]').forEach(card => {
       card.addEventListener('click', () => {
