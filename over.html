@@ -1,330 +1,232 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Over ONEMANCREW</title>
-  <meta name="description" content="Leer meer over ONEMANCREW — het verhaal achter de camera, onze missie en werkwijze.">
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 4rem;
-    }
-    .process-step {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      background: var(--dark-2);
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.05);
-      position: relative;
-      transition: var(--transition);
-    }
-    .process-step:hover {
-      border-color: rgba(244,128,49,0.2);
-      transform: translateY(-4px);
-    }
-    .process-step__number {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      font-weight: 900;
-      color: rgba(244,128,49,0.15);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .process-step__icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .process-step__title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-    .process-step__text {
-      font-size: 0.85rem;
-      color: var(--gray-light);
-      line-height: 1.6;
-    }
-    @media (max-width: 768px) {
-      .process-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .process-grid { grid-template-columns: 1fr; }
-    }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 768px) {
-      .values-grid { grid-template-columns: 1fr; }
-    }
-    .value-card {
-      padding: 2rem;
-      border-left: 3px solid var(--orange);
-    }
-    .value-card__title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-    }
-    .value-card__text {
-      font-size: 0.9rem;
-      color: var(--gray-light);
-      line-height: 1.7;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Over Jaimy van der Meer. ONEMANCREW. Cinematisch videograaf gespecialiseerd in B2B, corporate en vastgoed videoproductie in Nederland en internationaal." />
+  <title>Over Jaimy | ONEMANCREW</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <nav class="navbar scrolled" id="navbar">
-    <div class="container">
-      <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo">
-          <img src="images/logo.png" alt="ONEMANCREW logo" class="navbar__logo-img">
-          ONEMANCREW
-        </a>
-        <ul class="navbar__menu">
-          <li><a href="index.html" class="navbar__link">Home</a></li>
-          <li><a href="diensten.html" class="navbar__link">Diensten</a></li>
-          <li><a href="pakketten.html" class="navbar__link">Pakketten</a></li>
-          <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
-          <li><a href="over.html" class="navbar__link active">Over ons</a></li>
-          <li><a href="faq.html" class="navbar__link">FAQ</a></li>
-          <li><a href="contact.html" class="navbar__cta">Contact</a></li>
-        </ul>
-        <button class="navbar__hamburger" aria-label="Menu" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
+<!-- NAVIGATION -->
+<header class="header scrolled" id="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav__brand">
+      <img src="logo/logo.png" alt="ONEMANCREW" />
+    </a>
+    <ul class="nav__list" id="navList">
+      <li><a href="index.html"     class="nav__link">Home</a></li>
+      <li><a href="diensten.html"  class="nav__link">Diensten</a></li>
+      <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+      <li><a href="over.html"      class="nav__link">Over</a></li>
+      <li><a href="contact.html"   class="nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary nav__cta">Offerte Aanvragen</a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+</header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="diensten.html">Diensten</a>
-    <a href="pakketten.html">Pakketten</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="over.html">Over ons</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html" class="mobile-cta">Contact</a>
-  </div>
-
-  <div class="page-header">
-    <div class="container">
-      <div class="page-header__content">
-        <div class="section-label">Het verhaal</div>
-        <h1>Over <span style="color: var(--orange)">ONEMANCREW</span></h1>
-        <p>Leer meer over wie wij zijn, wat we doen en waarom we zo gepassioneerd zijn over video en storytelling.</p>
-      </div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <p class="page-hero__tag">De persoon achter de lens</p>
+      <h1 class="page-hero__title">Hallo, ik ben <span>Jaimy</span></h1>
+      <p class="page-hero__subtitle">Videograaf, cinematograaf en eigenaar van ONEMANCREW. Gepassioneerd over het vertellen van bedrijfsverhalen met cinema-kwaliteit.</p>
+      <div class="page-hero__line"></div>
     </div>
   </div>
+</section>
 
-  <!-- MAIN ABOUT -->
-  <section class="section about">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__image-wrap fade-up">
-          <img
-            src="https://primary.jwwb.nl/public/u/h/l/temp-isanxtojzbjwabcjgbip/snippet_05-standard.png"
-            alt="ONEMANCREW in actie"
-            class="about__image"
-          >
-          <div class="about__accent">
-            <span>Masters</span>
-            of Creative<br>Thinking
-          </div>
+<!-- ABOUT INTRO -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-image reveal-left">
+        <div class="about-image__frame">
+          <div class="about-image__placeholder">📷</div>
         </div>
-        <div class="about__text fade-up">
-          <div class="section-label">Ons verhaal</div>
-          <h2 class="section-title">Beelden die <span>blijven</span></h2>
-          <p>
-            ONEMANCREW is ontstaan vanuit een passie voor storytelling en visuele communicatie. Wij geloven dat elk verhaal het verdient om op de meest krachtige, authentieke manier verteld te worden.
-          </p>
-          <p>
-            Met ONEMANCREW helpen we bedrijven en particulieren hun verhaal op een unieke manier te vertellen. Van promotievideo's tot brandfilms, van documentaires tot sociale media content — mijn doel: beelden maken die mensen blijven voelen én onthouden.
-          </p>
-          <p>
-            Onze aanpak is altijd persoonlijk. We luisteren eerst, begrijpen jouw visie en vertalen die naar beelden die écht impact maken. Kwaliteit, creativiteit en een persoonlijke samenwerking staan centraal in alles wat we doen.
-          </p>
-          <div class="about__features">
-            <div class="about__feature">Persoonlijke aanpak</div>
-            <div class="about__feature">Snelle levering</div>
-            <div class="about__feature">4K+ kwaliteit</div>
-            <div class="about__feature">Creatieve visie</div>
-            <div class="about__feature">Eerlijke communicatie</div>
-            <div class="about__feature">Resultaatgericht</div>
-          </div>
+        <div class="about-image__accent"></div>
+        <div class="about-image__badge">
+          <div class="about-image__badge-number">7+</div>
+          <div class="about-image__badge-label">Jaar ervaring</div>
         </div>
       </div>
+
+      <div class="about-text reveal-right">
+        <p class="about-text__tag">Jaimy van der Meer</p>
+        <h2 class="about-text__title">Eén persoon. Volledige <span style="color:var(--clr-orange)">controle</span>.</h2>
+
+        <p>Ik startte ONEMANCREW vanuit een eenvoudige overtuiging: dat de beste videoproducties ontstaan wanneer één persoon volledige verantwoordelijkheid draagt, van concept tot colourstep.</p>
+
+        <p>Met jarenlange ervaring in de B2B wereld weet ik wat corporate klanten nodig hebben. Geen overbodige complexiteit, geen miscommunicatie tussen crewleden, alleen strak werk, op tijd en binnen budget.</p>
+
+        <p>Ik werk vanuit Nederland maar ben op aanvraag internationaal inzetbaar. Of het nu gaat om een event in Rotterdam, een case study in Londen of een recruitment film in Dubai, ik kom naar jou.</p>
+
+        <div class="about-text__divider"></div>
+
+        <p style="font-size:.85rem;color:var(--clr-white-60);font-weight:500;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1rem">Gear &amp; Expertise</p>
+        <div class="gear-grid">
+          <div class="gear-item"><div class="gear-dot"></div>Sony Cinema Line</div>
+          <div class="gear-item"><div class="gear-dot"></div>DJI Gimbal systemen</div>
+          <div class="gear-item"><div class="gear-dot"></div>Professionele belichting</div>
+          <div class="gear-item"><div class="gear-dot"></div>DaVinci Resolve grading</div>
+          <div class="gear-item"><div class="gear-dot"></div>Drone (bewijs van bekwaamheid)</div>
+          <div class="gear-item"><div class="gear-dot"></div>Adobe Premiere Pro</div>
+          <div class="gear-item"><div class="gear-dot"></div>Sennheiser audiosystemen</div>
+          <div class="gear-item"><div class="gear-dot"></div>Motion graphics</div>
+        </div>
+
+        <div style="margin-top:2.5rem">
+          <a href="contact.html" class="btn btn--primary btn--lg">Samenwerken? <span class="arrow">→</span></a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- VALUES -->
-  <section class="section" style="background: var(--black);">
-    <div class="container">
-      <div style="text-align:center;" class="fade-up">
-        <div class="section-label">Onze kern</div>
-        <h2 class="section-title">Waar wij in <span>geloven</span></h2>
+<!-- STATS -->
+<div class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="80">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Projecten opgeleverd</p>
       </div>
-      <div class="values-grid">
-        <div class="value-card fade-up">
-          <div class="value-card__title">🎯 Kwaliteit boven kwantiteit</div>
-          <p class="value-card__text">We zetten liever alles op alles voor één uitstekend project dan vluchtige content te produceren. Elk beeld telt.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-card__title">🤝 Echte samenwerking</div>
-          <p class="value-card__text">We zijn niet zomaar een productiebedrijf — we worden partners in jouw verhaal. Jouw succes is ons succes.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-card__title">💡 Creatief denken</div>
-          <p class="value-card__text">We zoeken altijd naar de meest originele aanpak. "Masters of Creative Thinking" is niet zomaar een slogan — het is een belofte.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-card__title">⚡ Snelheid & betrouwbaarheid</div>
-          <p class="value-card__text">Deadlines zijn heilig. We leveren altijd op tijd en communiceren helder over de voortgang van jouw project.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-card__title">🌟 Authentieke verhalen</div>
-          <p class="value-card__text">De beste video's zijn eerlijk en authentiek. We helpen jouw echte verhaal te vertellen — niet wat je denkt dat mensen willen zien.</p>
-        </div>
-        <div class="value-card fade-up">
-          <div class="value-card__title">📈 Meetbare impact</div>
-          <p class="value-card__text">Mooie beelden zijn mooi, maar uiteindelijk draait het om resultaat. We maken content die daadwerkelijk impact heeft op jouw doelen.</p>
-        </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="7">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Jaar ervaring</p>
       </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
-  <section class="section" style="background: var(--dark);">
-    <div class="container">
-      <div style="text-align:center;" class="fade-up">
-        <div class="section-label">Werkwijze</div>
-        <h2 class="section-title">Hoe wij <span>werken</span></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Van eerste contact tot eindproduct — ons gestroomlijnd proces zorgt voor de beste resultaten.</p>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="15">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Landen gefilmd</p>
       </div>
-      <div class="process-grid">
-        <div class="process-step fade-up">
-          <div class="process-step__number">01</div>
-          <div class="process-step__icon">💬</div>
-          <div class="process-step__title">Kennismaking</div>
-          <p class="process-step__text">We bespreken jouw project, wensen en doelen in een persoonlijk gesprek.</p>
-        </div>
-        <div class="process-step fade-up">
-          <div class="process-step__number">02</div>
-          <div class="process-step__icon">📋</div>
-          <div class="process-step__title">Concept & Planning</div>
-          <p class="process-step__text">We ontwikkelen een concept en maken een gedetailleerde planning voor de productie.</p>
-        </div>
-        <div class="process-step fade-up">
-          <div class="process-step__number">03</div>
-          <div class="process-step__icon">🎬</div>
-          <div class="process-step__title">Opnames</div>
-          <p class="process-step__text">Professionele filmdag(en) waarbij we alles vastleggen met state-of-the-art apparatuur.</p>
-        </div>
-        <div class="process-step fade-up">
-          <div class="process-step__number">04</div>
-          <div class="process-step__icon">✨</div>
-          <div class="process-step__title">Nabewerking & Levering</div>
-          <p class="process-step__text">Professionele editing, kleurcorrectie en muziek. Levering na jouw goedkeuring.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats-bar">
-    <div class="container">
-      <div class="stats-bar__grid">
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="5" data-suffix="+">5+</div>
-          <div class="stat-item__label">Jaar Ervaring</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="150" data-suffix="+">150+</div>
-          <div class="stat-item__label">Projecten</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="50" data-suffix="+">50+</div>
-          <div class="stat-item__label">Tevreden Klanten</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="6" data-suffix="">6</div>
-          <div class="stat-item__label">Diensten</div>
-        </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="30">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Tevreden klanten</p>
       </div>
     </div>
   </div>
+</div>
 
-  <section class="cta-section">
-    <div class="container">
-      <div class="section-label">Samenwerken?</div>
-      <h2 class="section-title">Laten we kennis<span>maken</span></h2>
-      <p class="section-subtitle">Ben jij op zoek naar een creatieve partner voor jouw volgende project? We horen graag van je.</p>
-      <div class="cta-section__buttons">
-        <a href="contact.html" class="btn btn-primary">Neem Contact Op <span class="btn-arrow">→</span></a>
-        <a href="portfolio.html" class="btn btn-outline">Bekijk Ons Werk</a>
+<!-- WAARDEN -->
+<section class="section">
+  <div class="container">
+    <div class="section__header text-center reveal">
+      <p class="section__tag">Mijn aanpak</p>
+      <h2 class="section__title">Waarom klanten voor <span>ONEMANCREW</span> kiezen</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-card__num">01</div>
+        <h3 class="value-card__title">Cinematische kwaliteit</h3>
+        <p class="value-card__desc">Geen standaard bedrijfsfilm. Ik breng een cinematic look naar elke productie. professionele grading, weloverwogen shot keuzes en nauwkeurige montage die jouw merk naar een hoger niveau tilt.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card__num">02</div>
+        <h3 class="value-card__title">Persoonlijk contact</h3>
+        <p class="value-card__desc">Jij werkt altijd direct met mij. Geen accountmanager als tussenpersoon, geen wisselende crewleden. Eén aanspreekpunt van brief tot oplevering, dat schept vertrouwen en bespaart tijd.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card__num">03</div>
+        <h3 class="value-card__title">B2B expertise</h3>
+        <p class="value-card__desc">Ik begrijp de wereld van corporate klanten. Ik weet hoe ik professionals voor de camera op hun gemak stel, hoe ik complexe boodschappen visueel vertaal en hoe ik boardroom-proof werk lever.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card__num">04</div>
+        <h3 class="value-card__title">Flexibel &amp; betrouwbaar</h3>
+        <p class="value-card__desc">Deadlines zijn heilig. Ik plan zorgvuldig, communiceer proactief en lever wat ik beloof. Of je nu morgen een event hebt of over drie maanden een campagne wil lanceren, ik organiseer het.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">
-            <div class="footer__brand-icon"><img src="images/logo.png" alt="ONEMANCREW logo"></div>
-            ONEMANCREW
-          </div>
-          <p class="footer__desc">Professionele videoproductie en fotografie. Wij maken beelden die mensen blijven voelen én onthouden.</p>
-          <div class="footer__social">
-            <a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-            <a href="mailto:contact@onemancrew.nl" aria-label="Email">✉️</a>
-            <a href="tel:+31628637074" aria-label="Telefoon">📞</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer__col-title">Navigatie</div>
-          <ul class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="diensten.html">Diensten</a></li>
-            <li><a href="pakketten.html">Pakketten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Informatie</div>
-          <ul class="footer__links">
-            <li><a href="over.html">Over ONEMANCREW</a></li>
-            <li><a href="faq.html">Veelgestelde Vragen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Contact</div>
-          <ul class="footer__links">
-            <li><a href="mailto:contact@onemancrew.nl">contact@onemancrew.nl</a></li>
-            <li><a href="tel:+31628637074">+31 6 28637074</a></li>
-            <li><a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2024 <span>ONEMANCREW</span>. Alle rechten voorbehouden.</p>
-        <p class="footer__copy">Made with ❤️ for great content</p>
+<!-- SECTOREN -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section__header text-center reveal">
+      <p class="section__tag">Thuis in</p>
+      <h2 class="section__title">Sectoren &amp; markten</h2>
+    </div>
+    <div class="sectors-row reveal">
+      <span class="sector-tag">Corporate</span>
+      <span class="sector-tag">Financieel</span>
+      <span class="sector-tag">Bouw &amp; Vastgoed</span>
+      <span class="sector-tag">B2B Dienstverlening</span>
+      <span class="sector-tag">Technologie</span>
+      <span class="sector-tag">Events &amp; Conferenties</span>
+      <span class="sector-tag">Consulting</span>
+      <span class="sector-tag">Internationaal</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__content">
+      <p class="section__tag">Kennismaking</p>
+      <h2 class="cta-section__title">Laten we <span style="color:var(--clr-orange)">kennismaken</span></h2>
+      <p class="cta-section__subtitle">Vertel me over jouw project en ik laat je zien wat ONEMANCREW voor jou kan betekenen.</p>
+      <div class="cta-section__actions">
+        <a href="contact.html" class="btn btn--primary btn--lg">Contact opnemen</a>
+        <a href="portfolio.html" class="btn btn--outline btn--lg">Bekijk werk <span class="arrow">→</span></a>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="footer__logo">
+          <img src="logo/logo.png" alt="ONEMANCREW" style="height:32px;width:auto;display:block" />
+        </a>
+        <p class="footer__brand-text">Cinematische videoproductie voor B2B bedrijven in Nederland en internationaal.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Navigatie</h4>
+        <ul class="footer__list">
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="over.html">Over Jaimy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Diensten</h4>
+        <ul class="footer__list">
+          <li><span>Event Aftermovies</span></li>
+          <li><span>Event Registraties</span></li>
+          <li><span>Case Studies</span></li>
+          <li><span>Interne Video's</span></li>
+          <li><span>Recruitment Video's</span></li>
+          <li><span>Promotievideo's</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__list">
+          <li><span>Nederland &amp; Internationaal</span></li>
+          <li><a href="mailto:info@onemancrew.nl">info@onemancrew.nl</a></li>
+          <li><span>Offerte altijd op maat</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 ONEMANCREW &middot; Jaimy van der Meer</p>
+      <p>Alle rechten voorbehouden</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

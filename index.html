@@ -1,378 +1,599 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONEMANCREW – Masters of Creative Thinking</title>
-  <meta name="description" content="ONEMANCREW – Professionele videoproductie, fotografie, documentaires, aftermovies en social media voor bedrijven en particulieren.">
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ONEMANCREW. Cinematische videoproductie voor B2B bedrijven. Events, case studies, recruitment & promotie. Jaimy van der Meer, Nederland & Internationaal." />
+  <title>ONEMANCREW | Cinematische Videoproductie</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo">
-          <img src="images/logo.png" alt="ONEMANCREW logo" class="navbar__logo-img">
-          ONEMANCREW
-        </a>
-        <ul class="navbar__menu">
-          <li><a href="index.html" class="navbar__link active">Home</a></li>
-          <li><a href="diensten.html" class="navbar__link">Diensten</a></li>
-          <li><a href="pakketten.html" class="navbar__link">Pakketten</a></li>
-          <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
-          <li><a href="over.html" class="navbar__link">Over ons</a></li>
-          <li><a href="faq.html" class="navbar__link">FAQ</a></li>
-          <li><a href="contact.html" class="navbar__cta">Contact</a></li>
-        </ul>
-        <button class="navbar__hamburger" aria-label="Menu" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
+<!-- NAVIGATION -->
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav__brand">
+      <img src="logo/logo.png" alt="ONEMANCREW" />
+    </a>
+    <ul class="nav__list" id="navList">
+      <li><a href="index.html"     class="nav__link">Home</a></li>
+      <li><a href="diensten.html"  class="nav__link">Diensten</a></li>
+      <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+      <li><a href="over.html"      class="nav__link">Over</a></li>
+      <li><a href="contact.html"   class="nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary nav__cta">Offerte Aanvragen</a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+</header>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="diensten.html">Diensten</a>
-    <a href="pakketten.html">Pakketten</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="over.html">Over ons</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html" class="mobile-cta">Contact</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bg">
+    <video class="hero__video" autoplay muted loop playsinline>
+      <source src="Background/Website_background_renewed.mov" type="video/mp4">
+      <source src="Background/Website_Background_V3.mp4" type="video/mp4">
+    </video>
+    <div class="hero__grid-overlay"></div>
   </div>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__video-bg">
-      <iframe
-        src="https://player.vimeo.com/video/1134551142?background=1&autoplay=1&loop=1&muted=1&dnt=1"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        title="ONEMANCREW Showreel"
-      ></iframe>
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <div class="hero__eyebrow">Video &amp; Content Productie</div>
-      <h1 class="hero__title">
-        ONE<span class="line-orange">MAN</span>CREW
-      </h1>
-      <p class="hero__subtitle">Masters of Creative Thinking</p>
-      <div class="hero__buttons">
-        <a href="portfolio.html" class="btn btn-primary">
-          Bekijk Portfolio
-          <span class="btn-arrow">→</span>
-        </a>
-        <a href="contact.html" class="btn btn-outline">
-          Neem Contact Op
-        </a>
-      </div>
-    </div>
-    <div class="hero__scroll">
-      <div class="hero__scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- STATS BAR -->
-  <div class="stats-bar" id="main-content">
-    <div class="container">
-      <div class="stats-bar__grid">
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="5" data-suffix="+">0+</div>
-          <div class="stat-item__label">Jaar Ervaring</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="150" data-suffix="+">0+</div>
-          <div class="stat-item__label">Projecten Afgerond</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="50" data-suffix="+">0+</div>
-          <div class="stat-item__label">Tevreden Klanten</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-item__number" data-count="100" data-suffix="%">0%</div>
-          <div class="stat-item__label">Kwaliteitsgarantie</div>
-        </div>
-      </div>
+  <div class="hero__content">
+    <h1 class="hero__title">
+      <span class="line-brand">ONEMANCREW</span>
+    </h1>
+    <p class="hero__tagline">
+      Beelden die bewegen.<br><span>Verhalen die blijven.</span>
+    </p>
+    <p class="hero__subtitle">
+      Wij vertellen jouw bedrijfsverhaal met cinema-kwaliteit, zodat klanten je zien, voelen en onthouden.
+    </p>
+    <div class="hero__actions">
+      <a href="portfolio.html" class="btn btn--outline btn--lg">
+        Bekijk Portfolio <span class="arrow">→</span>
+      </a>
+      <a href="contact.html" class="btn btn--primary btn--lg">
+        Offerte Aanvragen
+      </a>
     </div>
   </div>
+  <div class="hero__scroll">
+    <div class="hero__scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
 
-  <!-- FEATURED PROJECT -->
-  <section class="section featured">
-    <div class="container">
-      <div class="featured__grid">
-        <!-- TesSurviveSepsis: thumbnail + klik opent YouTube (embedding geblokkeerd) -->
-        <a href="https://www.youtube.com/watch?v=fIsMEhKlXpw" target="_blank" rel="noopener"
-           class="featured__media fade-up"
-           style="display:block; cursor:pointer; text-decoration:none;">
-          <div class="featured__badge">Nieuwste Werk</div>
-          <img src="Thumbnails/Thumbnail_tessurvivesepsis.png"
-               alt="TesSurviveSepsis documentaire"
-               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:16px;">
-          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:rgba(0,0,0,0.4);border-radius:16px;">
-            <div style="width:72px;height:72px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(244,128,49,0.5);">▶</div>
-            <span style="font-family:var(--font-heading);font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Bekijken op YouTube ↗</span>
-          </div>
-        </a>
-        <div class="featured__text fade-up">
-          <div class="section-label">Uitgelicht Project</div>
-          <h2 class="section-title">Documentaire<br><span>TesSurviveSepsis</span></h2>
-          <p>
-            De documentaire vertelt het indrukwekkende verhaal van Tess Willemse, die leeft met het Post-Sepsis Syndroom na een levensbedreigende infectie. We volgen haar reis van ziekte en onzekerheid naar hoop — inclusief haar behandeling in Australië en haar herstelproces in Nederland.
-          </p>
-          <p>
-            Met persoonlijke momenten en eerlijke inzichten brengen we de impact van sepsis en de nasleep ervan krachtig in beeld. Tegelijkertijd willen we bewustwording creëren voor deze vaak onderschatte aandoening.
-          </p>
-          <a href="portfolio.html" class="btn btn-primary">
-            Meer Projecten
-            <span class="btn-arrow">→</span>
-          </a>
-        </div>
-      </div>
+<!-- MARQUEE SERVICES -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Event Aftermovies</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Corporate Film</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Case Studies</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Recruitment Video</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Promotievideo</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Interne Infovideo</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Event Registratie</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bouw &amp; Vastgoed</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Financieel</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Event Aftermovies</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Corporate Film</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Case Studies</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Recruitment Video</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Promotievideo</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Interne Infovideo</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Event Registratie</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bouw &amp; Vastgoed</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Financieel</span>
+  </div>
+</div>
+
+<!-- DIENSTEN -->
+<section class="section">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section__tag">Wat ik doe</p>
+      <h2 class="section__title">Video die <span>resultaat</span> oplevert</h2>
+      <p class="section__subtitle">Van conceptfase tot eindproduct, alles onder één dak. Cinematische kwaliteit.</p>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section services">
-    <div class="container">
-      <div class="services__header">
-        <div class="section-label">Wat wij doen</div>
-        <h2 class="section-title">Onze <span>Diensten</span></h2>
-        <p class="section-subtitle">Van concept tot eindproduct — wij bieden een volledig scala aan creatieve videodiensten.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <p class="service-card__num">01</p>
+        <div class="service-card__icon">🎬</div>
+        <h3 class="service-card__title">Event Aftermovies &amp; Registraties</h3>
+        <p class="service-card__desc">Sfeervolle aftermovies en volledige registraties van conferenties, beurzen en bedrijfsevenementen. Jouw event herleven in iedere frame.</p>
+        <a href="diensten.html" class="service-card__link">Meer info <span class="arrow">→</span></a>
       </div>
-      <div class="services__grid">
-        <div class="service-card fade-up">
-          <div class="service-card__icon">🎬</div>
-          <h3 class="service-card__title">Promotievideo's</h3>
-          <p class="service-card__text">Krachtige promotiefilms die jouw merk, product of dienst op een memorabele manier presenteren.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">🎉</div>
-          <h3 class="service-card__title">Aftermovies</h3>
-          <p class="service-card__text">Levendige aftermovies die de sfeer en energie van jouw evenement perfect vastleggen.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">💍</div>
-          <h3 class="service-card__title">Bruiloften</h3>
-          <p class="service-card__text">Tijdloze bruiloftsvideo's die elk kostbaar moment voor altijd bewaren.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">📱</div>
-          <h3 class="service-card__title">Social Media</h3>
-          <p class="service-card__text">Professionele content creatie en social media beheer voor maximaal bereik en engagement.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">🎥</div>
-          <h3 class="service-card__title">Documentaires</h3>
-          <p class="service-card__text">Meeslepende documentaires die verhalen vertellen die mensen blijven voelen én onthouden.</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">📸</div>
-          <h3 class="service-card__title">Fotografie</h3>
-          <p class="service-card__text">Professionele fotografie voor bedrijven, evenementen, producten en persoonlijke projecten.</p>
-        </div>
+      <div class="service-card reveal">
+        <p class="service-card__num">02</p>
+        <div class="service-card__icon">📊</div>
+        <h3 class="service-card__title">Case Studies</h3>
+        <p class="service-card__desc">Vertel het succesverhaal van jouw klant. Overtuigende video-case studies die vertrouwen opbouwen en deals sluiten.</p>
+        <a href="diensten.html" class="service-card__link">Meer info <span class="arrow">→</span></a>
       </div>
-      <div style="text-align:center; margin-top: 3rem;">
-        <a href="diensten.html" class="btn btn-outline">Alle Diensten Bekijken <span class="btn-arrow">→</span></a>
+      <div class="service-card reveal">
+        <p class="service-card__num">03</p>
+        <div class="service-card__icon">🏢</div>
+        <h3 class="service-card__title">Interne Infovideo's</h3>
+        <p class="service-card__desc">Duidelijke interne communicatievideo's die medewerkers informeren, motiveren en verbinden, ongeacht locatie.</p>
+        <a href="diensten.html" class="service-card__link">Meer info <span class="arrow">→</span></a>
       </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <div class="quote-section">
-    <div class="container">
-      <blockquote>
-        "Met ONEMANCREW profiteert u van de flexibiliteit en efficiëntie van ervaren videoprofessionals. Persoonlijke aandacht én een resultaat dat uw verwachtingen overtreft."
-        <cite>— ONEMANCREW</cite>
-      </blockquote>
+      <div class="service-card reveal">
+        <p class="service-card__num">04</p>
+        <div class="service-card__icon">👥</div>
+        <h3 class="service-card__title">Recruitment Video's</h3>
+        <p class="service-card__desc">Authentieke video's die jouw bedrijfscultuur tonen en de juiste kandidaten aantrekken. Meer dan een vacature, een beleving.</p>
+        <a href="diensten.html" class="service-card__link">Meer info <span class="arrow">→</span></a>
+      </div>
+      <div class="service-card reveal">
+        <p class="service-card__num">05</p>
+        <div class="service-card__icon">🚀</div>
+        <h3 class="service-card__title">Promotievideo's</h3>
+        <p class="service-card__desc">Impactvolle promotievideo's voor producten, diensten en campagnes. Cinematisch gemaakt om te converteren.</p>
+        <a href="diensten.html" class="service-card__link">Meer info <span class="arrow">→</span></a>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="section about">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__image-wrap fade-up">
-          <img
-            src="https://primary.jwwb.nl/public/u/h/l/temp-isanxtojzbjwabcjgbip/snippet_05-standard.png"
-            alt="ONEMANCREW in actie"
-            class="about__image"
-          >
-          <div class="about__accent">
-            <span>100%</span>
-            Kwaliteit<br>Gegarandeerd
+<!-- FEATURED WORK -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section__tag">Recent werk</p>
+      <h2 class="section__title">Uitgelicht <span>portfolio</span></h2>
+    </div>
+    <div class="portfolio-grid portfolio-grid--home">
+      <div class="portfolio-item portfolio-item--large reveal" data-cat="event" data-video-src="Aftermovies/2025924_KotlinDevDay_V5.mp4">
+        <video class="portfolio-item__video" muted preload="none" playsinline loop poster="Aftermovies/thumb_kotlin.jpg">
+          <source src="Aftermovies/2025924_KotlinDevDay_V5.mp4" type="video/mp4">
+        </video>
+        <div class="portfolio-item__gradient"></div>
+        <div class="portfolio-item__overlay">
+          <div class="portfolio-item__play">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
           </div>
+          <p class="portfolio-item__overlay-title">Bekijk video</p>
         </div>
-        <div class="about__text fade-up">
-          <div class="section-label">Over Ons</div>
-          <h2 class="section-title">Over <span>ONEMANCREW</span></h2>
-          <p>
-            ONEMANCREW helpt bedrijven en particulieren hun verhaal op een unieke en authentieke manier te vertellen. Van promotievideo's tot brandfilms — mijn doel: beelden maken die mensen blijven voelen én onthouden.
-          </p>
-          <p>
-            Met jaren ervaring in de creatieve industrie combineert ONEMANCREW technische expertise met een artistieke visie voor resultaten die echt impact maken.
-          </p>
-          <div class="about__features">
-            <div class="about__feature">Persoonlijke aanpak</div>
-            <div class="about__feature">Snelle levering</div>
-            <div class="about__feature">Professionele apparatuur</div>
-            <div class="about__feature">Creatieve visie</div>
-            <div class="about__feature">Resultaatgericht</div>
-            <div class="about__feature">Kwaliteitsgarantie</div>
+        <div class="portfolio-item__info">
+          <p class="portfolio-item__cat">Event Aftermovie</p>
+          <p class="portfolio-item__title">Kotlin Dev Day 2025</p>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="case">
+        <div class="portfolio-item__bg bg-2">
+          <div class="portfolio-item__icon">📽️</div>
+        </div>
+        <div class="portfolio-item__overlay">
+          <div class="portfolio-item__play">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
           </div>
-          <a href="over.html" class="btn btn-primary">
-            Meer Over Ons
-            <span class="btn-arrow">→</span>
-          </a>
+          <p class="portfolio-item__overlay-title">Bekijk project</p>
+        </div>
+        <div class="portfolio-item__info">
+          <p class="portfolio-item__cat">Case Study</p>
+          <p class="portfolio-item__title">ABN AMRO. Klantenverhaal</p>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="promo">
+        <div class="portfolio-item__bg bg-3">
+          <div class="portfolio-item__icon">🎞️</div>
+        </div>
+        <div class="portfolio-item__overlay">
+          <div class="portfolio-item__play">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <p class="portfolio-item__overlay-title">Bekijk project</p>
+        </div>
+        <div class="portfolio-item__info">
+          <p class="portfolio-item__cat">Promotievideo</p>
+          <p class="portfolio-item__title">Bouwbedrijf Van Wijnen</p>
+        </div>
+      </div>
+      <div class="portfolio-item reveal" data-cat="recruitment" data-video-src="Recruitment/2025918_Video_Milewayonboarding_10112025_V5.mp4">
+        <video class="portfolio-item__video" muted preload="none" playsinline loop poster="Recruitment/thumb_mileway.jpg">
+          <source src="Recruitment/2025918_Video_Milewayonboarding_10112025_V5.mp4" type="video/mp4">
+        </video>
+        <div class="portfolio-item__gradient"></div>
+        <div class="portfolio-item__overlay">
+          <div class="portfolio-item__play">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <p class="portfolio-item__overlay-title">Bekijk video</p>
+        </div>
+        <div class="portfolio-item__info">
+          <p class="portfolio-item__cat">Recruitment</p>
+          <p class="portfolio-item__title">Mileway. Onboarding</p>
+        </div>
+      </div>
+      <div class="portfolio-item portfolio-item--large reveal" data-cat="intern">
+        <div class="portfolio-item__bg bg-5">
+          <div class="portfolio-item__icon">📹</div>
+        </div>
+        <div class="portfolio-item__overlay">
+          <div class="portfolio-item__play">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <p class="portfolio-item__overlay-title">Bekijk project</p>
+        </div>
+        <div class="portfolio-item__info">
+          <p class="portfolio-item__cat">Interne Video</p>
+          <p class="portfolio-item__title">ING. Strategie Presentatie 2025</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- PORTFOLIO PREVIEW -->
-  <section class="section portfolio-preview">
-    <div class="container">
-      <div class="portfolio-preview__header">
-        <div>
-          <div class="section-label">Ons werk</div>
-          <h2 class="section-title">Recent <span>Portfolio</span></h2>
-        </div>
-        <a href="portfolio.html" class="btn btn-outline">Alles Bekijken <span class="btn-arrow">→</span></a>
-      </div>
-      <div class="portfolio-preview__grid">
-        <div class="portfolio-card fade-up" data-video="Video/aftermovie/H20_Topsportgala_Aftermovie_V3.mp4">
-          <div class="portfolio-card__media">
-            <img src="Thumbnails/Thumbnail_Topsportgala.png" alt="Aftermovie Topsportgala Volendam 2025">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__play">▶</div>
-            </div>
-          </div>
-          <div class="portfolio-card__info">
-            <div class="portfolio-card__tag">Aftermovie</div>
-            <div class="portfolio-card__title">Topsportgala Volendam 2025</div>
-          </div>
-        </div>
-        <a class="portfolio-card fade-up" href="https://www.youtube.com/watch?v=u6NIxt2R-Ak" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
-          <div class="portfolio-card__media">
-            <img src="Thumbnails/Thumbnail_Bruiloft_Tim&Felicia.png" alt="Bruiloft Timothy & Felicia">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__play">▶</div>
-            </div>
-          </div>
-          <div class="portfolio-card__info">
-            <div class="portfolio-card__tag">Bruiloft</div>
-            <div class="portfolio-card__title">Timothy &amp; Felicia</div>
-          </div>
-        </a>
-        <div class="portfolio-card fade-up" data-video="Video/reels/012_KKNH_ProjectZaandam_19032026_V1.mp4">
-          <div class="portfolio-card__media">
-            <img src="Thumbnails/Thumbnail_KKNH.png" alt="Social media - Kunststof Kozijn Noord Holland">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__play">▶</div>
-            </div>
-          </div>
-          <div class="portfolio-card__info">
-            <div class="portfolio-card__tag">Social Media</div>
-            <div class="portfolio-card__title">Kunststof Kozijn Noord Holland</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="section-label">Klaar om te starten?</div>
-      <h2 class="section-title">Laten we samen iets<br><span>bijzonders maken</span></h2>
-      <p class="section-subtitle">Vertel ons over jouw project en ontdek hoe ONEMANCREW jouw visie tot leven kan brengen.</p>
-      <div class="cta-section__buttons">
-        <a href="contact.html" class="btn btn-primary">Offerte Aanvragen <span class="btn-arrow">→</span></a>
-        <a href="pakketten.html" class="btn btn-outline">Pakketten Bekijken</a>
-      </div>
-      <div class="cta-section__contact-info">
-        <a href="tel:+31628637074" class="contact-pill">
-          <span class="contact-pill__icon">📞</span>
-          +31 6 28637074
-        </a>
-        <a href="mailto:contact@onemancrew.nl" class="contact-pill">
-          <span class="contact-pill__icon">✉️</span>
-          contact@onemancrew.nl
-        </a>
-        <a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener" class="contact-pill">
-          <span class="contact-pill__icon">📷</span>
-          @onemancrew.productions
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">
-            <div class="footer__brand-icon"><img src="images/logo.png" alt="ONEMANCREW logo"></div>
-            ONEMANCREW
-          </div>
-          <p class="footer__desc">Professionele videoproductie en fotografie. Wij maken beelden die mensen blijven voelen én onthouden.</p>
-          <div class="footer__social">
-            <a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-            <a href="mailto:contact@onemancrew.nl" aria-label="Email">✉️</a>
-            <a href="tel:+31628637074" aria-label="Telefoon">📞</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer__col-title">Navigatie</div>
-          <ul class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="diensten.html">Diensten</a></li>
-            <li><a href="pakketten.html">Pakketten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Informatie</div>
-          <ul class="footer__links">
-            <li><a href="over.html">Over ONEMANCREW</a></li>
-            <li><a href="faq.html">Veelgestelde Vragen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Contact</div>
-          <ul class="footer__links">
-            <li><a href="mailto:contact@onemancrew.nl">contact@onemancrew.nl</a></li>
-            <li><a href="tel:+31628637074">+31 6 28637074</a></li>
-            <li><a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2024 <span>ONEMANCREW</span>. Alle rechten voorbehouden.</p>
-        <p class="footer__copy">Made with ❤️ for great content</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- VIDEO MODAL -->
-  <div class="video-modal" id="videoModal">
-    <div class="video-modal__backdrop" id="videoModalBackdrop"></div>
-    <div class="video-modal__box">
-      <button class="video-modal__close" id="videoModalClose">✕</button>
-      <video class="video-modal__player" id="videoModalPlayer" controls playsinline></video>
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="portfolio.html" class="btn btn--outline-orange btn--lg">
+        Volledig Portfolio <span class="arrow">→</span>
+      </a>
     </div>
   </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- SECTOREN -->
+<section class="section--sm" style="padding-top:0">
+  <div class="container">
+    <div class="section__header text-center reveal">
+      <p class="section__tag">Sectoren</p>
+      <h2 class="section__title">Werkzaam voor</h2>
+    </div>
+    <div class="sectors-row reveal">
+      <span class="sector-tag">Corporate</span>
+      <span class="sector-tag">Financieel</span>
+      <span class="sector-tag">Bouw &amp; Vastgoed</span>
+      <span class="sector-tag">B2B Dienstverlening</span>
+      <span class="sector-tag">Technologie</span>
+      <span class="sector-tag">Events &amp; Conferenties</span>
+      <span class="sector-tag">Consulting</span>
+      <span class="sector-tag">Internationaal</span>
+    </div>
+  </div>
+</section>
+
+<!-- ROI / WAARDE -->
+<section class="roi-section section">
+  <div class="container">
+    <div class="section__header text-center reveal">
+      <p class="section__tag">De waarde van video</p>
+      <h2 class="section__title">Waarom bedrijven investeren in <span>cinematische video</span></h2>
+      <p class="section__subtitle">Video is niet langer nice-to-have. Het is het krachtigste middel om vertrouwen te bouwen, verhalen te vertellen en resultaten te zetten.</p>
+    </div>
+
+    <!-- Stat cards -->
+    <div class="roi-grid reveal">
+      <div class="roi-card">
+        <div class="roi-card__stat">72%</div>
+        <h3 class="roi-card__title">Beslissers kijken eerst</h3>
+        <p class="roi-card__desc">Van B2B-beslissers bekijkt een bedrijfsvideo vóórdat ze contact opnemen. Jouw video is het eerste gesprek.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-card__stat">5×</div>
+        <h3 class="roi-card__title">Langer op je website</h3>
+        <p class="roi-card__desc">Bezoekers blijven gemiddeld 5x langer op een pagina mét video dan zonder. Meer tijd = meer kans op conversie.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-card__stat">80%</div>
+        <h3 class="roi-card__title">Hogere conversie</h3>
+        <p class="roi-card__desc">Landingspagina's met video converteren tot 80% beter. Eén video kan meer doen dan een hele campagne.</p>
+      </div>
+      <div class="roi-card">
+        <div class="roi-card__stat">3×</div>
+        <h3 class="roi-card__title">Meer sollicitaties</h3>
+        <p class="roi-card__desc">Vacatures met een authentieke recruitment video ontvangen tot 3x meer reacties van relevante kandidaten.</p>
+      </div>
+    </div>
+
+    <!-- Redenen -->
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center">
+      <div class="reveal-left">
+        <p class="section__tag">Jouw investering</p>
+        <h3 style="font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:1.25rem">Video werkt <span style="color:var(--clr-orange)">lang nadat de camera is uitgezet</span></h3>
+        <p style="font-size:.95rem;color:var(--clr-white-60);line-height:1.85;margin-bottom:1.25rem">Een event duurt één dag. Een goede aftermovie herleeft dat event maandenlang op LinkedIn, in nieuwsbrieven en op de website. Een case study video sluit deals terwijl jij slaapt.</p>
+        <p style="font-size:.95rem;color:var(--clr-white-60);line-height:1.85">Dat is de reden waarom B2B bedrijven die éénmalig investeren in kwalitatieve video, er steeds opnieuw voor terugkomen.</p>
+        <div style="margin-top:2.5rem">
+          <a href="contact.html" class="btn btn--primary btn--lg">Bespreek jouw project <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="roi-reasons reveal-right">
+        <div class="roi-reason">
+          <div class="roi-reason__icon">🎯</div>
+          <div>
+            <h4 class="roi-reason__title">Vertrouwen op schaal</h4>
+            <p class="roi-reason__desc">Eén video kan honderden prospects tegelijk overtuigen. consistenter dan welk salesgesprek dan ook.</p>
+          </div>
+        </div>
+        <div class="roi-reason">
+          <div class="roi-reason__icon">📅</div>
+          <div>
+            <h4 class="roi-reason__title">Langdurig rendement</h4>
+            <p class="roi-reason__desc">Een goed geproduceerde video blijft jaren relevant en werkt 24/7 voor jouw merk. op iedere platform.</p>
+          </div>
+        </div>
+        <div class="roi-reason">
+          <div class="roi-reason__icon">🤝</div>
+          <div>
+            <h4 class="roi-reason__title">Emotie als overtuigingskracht</h4>
+            <p class="roi-reason__desc">Cijfers overtuigen het hoofd. Video overtuigt het hart. En beslissingen. ook in B2B. worden genomen door mensen.</p>
+          </div>
+        </div>
+        <div class="roi-reason">
+          <div class="roi-reason__icon">🌍</div>
+          <div>
+            <h4 class="roi-reason__title">Bereik zonder grenzen</h4>
+            <p class="roi-reason__desc">Jouw verhaal reist mee. naar internationale klanten, investeerders en partners die je nooit persoonlijk ontmoet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERACTIEF PROCES -->
+<section class="process-interactive section">
+  <div class="container">
+    <div class="section__header text-center reveal">
+      <p class="section__tag">Hoe het werkt</p>
+      <h2 class="section__title">Van idee tot <span>impact</span></h2>
+      <p class="section__subtitle" style="margin:1rem auto 0">Elk project doorloopt hetzelfde bewezen proces — van eerste gesprek tot eindresultaat.</p>
+    </div>
+
+    <!-- Step indicator -->
+    <div class="process-steps reveal">
+      <button class="process-step active" data-step="0">
+        <div class="process-step__circle">01</div>
+        <span class="process-step__name">Intake</span>
+      </button>
+      <div class="process-step__line"></div>
+      <button class="process-step" data-step="1">
+        <div class="process-step__circle">02</div>
+        <span class="process-step__name">Concept</span>
+      </button>
+      <div class="process-step__line"></div>
+      <button class="process-step" data-step="2">
+        <div class="process-step__circle">03</div>
+        <span class="process-step__name">Filmdag</span>
+      </button>
+      <div class="process-step__line"></div>
+      <button class="process-step" data-step="3">
+        <div class="process-step__circle">04</div>
+        <span class="process-step__name">Post-productie</span>
+      </button>
+      <div class="process-step__line"></div>
+      <button class="process-step" data-step="4">
+        <div class="process-step__circle">05</div>
+        <span class="process-step__name">Oplevering</span>
+      </button>
+    </div>
+
+    <!-- Content panels -->
+    <div class="process-content">
+
+      <div class="process-panel active" data-panel="0">
+        <div class="process-panel__visual">
+          <div class="process-panel__icon">🎯</div>
+          <div class="process-panel__bg-num">01</div>
+        </div>
+        <div class="process-panel__body">
+          <p class="process-panel__tag">Stap 01 — Intake &amp; Strategie</p>
+          <h3 class="process-panel__title">We leren jouw verhaal kennen</h3>
+          <p class="process-panel__desc">In een vrijblijvend gesprek bespreken we jouw doel, doelgroep en boodschap. Geen templates, geen kant-en-klare pakketten — een aanpak die bij jou past.</p>
+          <div class="process-panel__details">
+            <div class="process-detail">Gratis strategiegesprek (30–60 min)</div>
+            <div class="process-detail">Analyse van merk &amp; doelgroep</div>
+            <div class="process-detail">Budgetinschatting &amp; planning</div>
+            <div class="process-detail">Afstemming op intern team</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="1">
+        <div class="process-panel__visual">
+          <div class="process-panel__icon">📋</div>
+          <div class="process-panel__bg-num">02</div>
+        </div>
+        <div class="process-panel__body">
+          <p class="process-panel__tag">Stap 02 — Concept &amp; Voorbereiding</p>
+          <h3 class="process-panel__title">Concept wordt strategie</h3>
+          <p class="process-panel__desc">We ontwikkelen een concreet videoconcept: script of storyboard, shot list, locatieverkenning en een strakke planning. Zo weet iedereen precies wat er gaat gebeuren.</p>
+          <div class="process-panel__details">
+            <div class="process-detail">Script of storyboard op maat</div>
+            <div class="process-detail">Shot list &amp; draaidag planning</div>
+            <div class="process-detail">Locatiescout (on-site of remote)</div>
+            <div class="process-detail">Briefing van alle betrokkenen</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="2">
+        <div class="process-panel__visual">
+          <div class="process-panel__icon">🎬</div>
+          <div class="process-panel__bg-num">03</div>
+        </div>
+        <div class="process-panel__body">
+          <p class="process-panel__tag">Stap 03 — Filmdag</p>
+          <h3 class="process-panel__title">Cinema-kwaliteit op de set</h3>
+          <p class="process-panel__desc">Met professionele cinema-apparatuur en jarenlange ervaring zorgen we voor beelden die opvallen. Eén draaidag, geen verrassingen — alles is voorbereid.</p>
+          <div class="process-panel__details">
+            <div class="process-detail">Sony FX6 / FX3 cinema camera</div>
+            <div class="process-detail">Professionele verlichting &amp; audio</div>
+            <div class="process-detail">Op locatie bij jou of elders</div>
+            <div class="process-detail">Begeleiding van interviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="3">
+        <div class="process-panel__visual">
+          <div class="process-panel__icon">🎞️</div>
+          <div class="process-panel__bg-num">04</div>
+        </div>
+        <div class="process-panel__body">
+          <p class="process-panel__tag">Stap 04 — Post-productie</p>
+          <h3 class="process-panel__title">Jouw verhaal tot leven gewekt</h3>
+          <p class="process-panel__desc">Editing, kleurgrading, sound design en motion graphics. Alles wordt zorgvuldig samengesteld tot een video die jouw boodschap krachtig overbrengt.</p>
+          <div class="process-panel__details">
+            <div class="process-detail">Professionele kleurgrading</div>
+            <div class="process-detail">Sound design &amp; muzieklicenties</div>
+            <div class="process-detail">Ondertitels &amp; grafische elementen</div>
+            <div class="process-detail">Revisieronde(s) inbegrepen</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-panel" data-panel="4">
+        <div class="process-panel__visual">
+          <div class="process-panel__icon">🚀</div>
+          <div class="process-panel__bg-num">05</div>
+        </div>
+        <div class="process-panel__body">
+          <p class="process-panel__tag">Stap 05 — Oplevering</p>
+          <h3 class="process-panel__title">Klaar voor gebruik. Klaar voor resultaat.</h3>
+          <p class="process-panel__desc">Je ontvangt de finale video in de formats die je nodig hebt — website, LinkedIn, intern gebruik of evenement. Klaar voor directe inzet.</p>
+          <div class="process-panel__details">
+            <div class="process-detail">Levering in alle gewenste formats</div>
+            <div class="process-detail">Geoptimaliseerd voor elk platform</div>
+            <div class="process-detail">Raw footage op aanvraag</div>
+            <div class="process-detail">Nazorg &amp; advies inbegrepen</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Voortgangsbalk -->
+    <div class="process-progress-bar">
+      <div class="process-progress-fill"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="80">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Projecten opgeleverd</p>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="7">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Jaar ervaring</p>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="15">0</span><span style="color:var(--clr-orange)">+</span></div>
+        <p class="stat-item__label">Landen gefilmd</p>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-item__number"><span data-count="100">0</span><span style="color:var(--clr-orange)">%</span></div>
+        <p class="stat-item__label">Persoonlijk contact</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CLIENTS MARQUEE -->
+<div class="marquee-section marquee-section--clients">
+  <div class="marquee-clients-label">Gewerkt voor</div>
+  <div class="marquee-track marquee-track--clients">
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>H2O</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>KKNH</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Mileway</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Xebia</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Kotlin</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Rabobank</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Provincie Noord-Holland</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Zorgbalans</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Telstar</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Kopzorg Alkmaar</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>H2O</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>KKNH</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Mileway</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Xebia</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Kotlin</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Rabobank</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Provincie Noord-Holland</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Zorgbalans</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Telstar</span>
+    <span class="marquee-item marquee-item--client"><span class="marquee-dot marquee-dot--white"></span>Kopzorg Alkmaar</span>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__content">
+      <p class="section__tag">Laten we samenwerken</p>
+      <h2 class="cta-section__title">Klaar voor jouw <span style="color:var(--clr-orange)">volgende project</span>?</h2>
+      <p class="cta-section__subtitle">Ik denk graag mee over jouw videostrategie. persoonlijk, op maat en zonder omwegen.</p>
+      <div class="cta-section__actions">
+        <a href="contact.html" class="btn btn--primary btn--lg">Offerte Aanvragen</a>
+        <a href="over.html"    class="btn btn--outline btn--lg">Over Jaimy <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="footer__logo">
+          <img src="logo/logo.png" alt="ONEMANCREW" style="height:32px;width:auto;display:block" />
+        </a>
+        <p class="footer__brand-text">Cinematische videoproductie voor B2B bedrijven in Nederland en internationaal. Professioneel, persoonlijk, resultaatgericht.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Navigatie</h4>
+        <ul class="footer__list">
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="over.html">Over Jaimy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Diensten</h4>
+        <ul class="footer__list">
+          <li><span>Event Aftermovies</span></li>
+          <li><span>Event Registraties</span></li>
+          <li><span>Case Studies</span></li>
+          <li><span>Interne Video's</span></li>
+          <li><span>Recruitment Video's</span></li>
+          <li><span>Promotievideo's</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__list">
+          <li><span>Nederland &amp; Internationaal</span></li>
+          <li><a href="mailto:info@onemancrew.nl">info@onemancrew.nl</a></li>
+          <li><span>Offerte altijd op maat</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 ONEMANCREW &middot; Jaimy van der Meer</p>
+      <p>Alle rechten voorbehouden</p>
+    </div>
+  </div>
+</footer>
+
+<!-- VIDEO LIGHTBOX -->
+<div id="videoLightbox" class="lightbox" role="dialog" aria-modal="true">
+  <div class="lightbox__backdrop"></div>
+  <div class="lightbox__inner">
+    <button class="lightbox__close" aria-label="Sluiten">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <video class="lightbox__video" controls playsinline></video>
+    <div class="lightbox__meta">
+      <p class="lightbox__cat"></p>
+      <p class="lightbox__title"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>

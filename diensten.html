@@ -1,216 +1,273 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diensten – ONEMANCREW</title>
-  <meta name="description" content="Ontdek alle videodiensten van ONEMANCREW: promotievideo's, aftermovies, bruiloften, social media, documentaires en fotografie.">
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ONEMANCREW diensten. Event aftermovies, case studies, interne infovideo's, recruitment en promotievideo's voor B2B bedrijven." />
+  <title>Diensten | ONEMANCREW</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <nav class="navbar scrolled" id="navbar">
-    <div class="container">
-      <div class="navbar__inner">
-        <a href="index.html" class="navbar__logo">
-          <img src="images/logo.png" alt="ONEMANCREW logo" class="navbar__logo-img">
-          ONEMANCREW
-        </a>
-        <ul class="navbar__menu">
-          <li><a href="index.html" class="navbar__link">Home</a></li>
-          <li><a href="diensten.html" class="navbar__link active">Diensten</a></li>
-          <li><a href="pakketten.html" class="navbar__link">Pakketten</a></li>
-          <li><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
-          <li><a href="over.html" class="navbar__link">Over ons</a></li>
-          <li><a href="faq.html" class="navbar__link">FAQ</a></li>
-          <li><a href="contact.html" class="navbar__cta">Contact</a></li>
-        </ul>
-        <button class="navbar__hamburger" aria-label="Menu" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
+<!-- NAVIGATION -->
+<header class="header scrolled" id="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav__brand">
+      <img src="logo/logo.png" alt="ONEMANCREW" />
+    </a>
+    <ul class="nav__list" id="navList">
+      <li><a href="index.html"     class="nav__link">Home</a></li>
+      <li><a href="diensten.html"  class="nav__link">Diensten</a></li>
+      <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+      <li><a href="over.html"      class="nav__link">Over</a></li>
+      <li><a href="contact.html"   class="nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary nav__cta">Offerte Aanvragen</a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+</header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="diensten.html">Diensten</a>
-    <a href="pakketten.html">Pakketten</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="over.html">Over ons</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html" class="mobile-cta">Contact</a>
-  </div>
-
-  <!-- PAGE HEADER -->
-  <div class="page-header">
-    <div class="container">
-      <div class="page-header__content">
-        <div class="section-label">Wat wij aanbieden</div>
-        <h1>Onze <span style="color: var(--orange)">Diensten</span></h1>
-        <p>Van concept tot eindproduct — ONEMANCREW biedt een volledig scala aan professionele video- en fotodiensten.</p>
-      </div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <p class="page-hero__tag">Wat ik maak</p>
+      <h1 class="page-hero__title">Diensten die <span>impact</span> creëren</h1>
+      <p class="page-hero__subtitle">Vijf specialisaties, één consistent niveau. Cinematische kwaliteit voor B2B bedrijven die serieus zijn over hun imago.</p>
+      <div class="page-hero__line"></div>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES DETAIL -->
-  <section class="section" style="background: var(--dark);">
-    <div class="container">
+<!-- DIENSTEN DETAIL -->
+<section class="section" style="padding-top:0">
+  <div class="container">
 
-      <!-- Service 1 -->
-      <div class="featured__grid fade-up" style="margin-bottom: 6rem;">
-        <div>
-          <div class="service-card__icon" style="margin-bottom: 1.5rem; width: 70px; height: 70px; font-size: 2rem; border-radius: 16px; background: rgba(244,128,49,0.1); display:flex; align-items:center; justify-content:center;">🎬</div>
-          <div class="section-label">Dienst 01</div>
-          <h2 class="section-title">Promotie<span>video's</span></h2>
-          <p style="color: var(--gray-light); line-height: 1.8; margin-bottom: 1.5rem;">
-            Krachtige promotiefilms die jouw merk, product of dienst op een memorabele manier presenteren aan je doelgroep. Van korte social media clips tot volledige bedrijfsvideo's.
-          </p>
-          <p style="color: var(--gray-light); line-height: 1.8; margin-bottom: 2rem;">
-            Wij werken nauw samen met jou om jouw boodschap te vertalen naar beeld en geluid dat echt impact maakt. Elke video is uniek en op maat gemaakt.
-          </p>
-          <a href="contact.html" class="btn btn-primary">Vraag een offerte aan <span class="btn-arrow">→</span></a>
-        </div>
-        <div style="background: var(--dark-2); border-radius: 16px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
-          🎬
-        </div>
+    <!-- Dienst 1 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--clr-dark-border)">
+      <div class="reveal-left">
+        <div style="aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;background:linear-gradient(135deg,#2a1a0e,#1a1a1a);display:flex;align-items:center;justify-content:center;font-size:4rem;color:rgba(255,255,255,.08);border:1px solid var(--clr-dark-border)">🎬</div>
       </div>
-
-      <!-- Service 2 -->
-      <div class="featured__grid fade-up" style="margin-bottom: 6rem; direction: rtl;">
-        <div style="direction: ltr;">
-          <div class="service-card__icon" style="margin-bottom: 1.5rem; width: 70px; height: 70px; font-size: 2rem; border-radius: 16px; background: rgba(244,128,49,0.1); display:flex; align-items:center; justify-content:center;">🎉</div>
-          <div class="section-label">Dienst 02</div>
-          <h2 class="section-title">After<span>movies</span></h2>
-          <p style="color: var(--gray-light); line-height: 1.8; margin-bottom: 1.5rem;">
-            Levendige aftermovies die de sfeer, energie en hoogtepunten van jouw evenement perfect vastleggen. Ideaal voor festivals, bedrijfsevents, sporttoernooien en meer.
-          </p>
-          <p style="color: var(--gray-light); line-height: 1.8; margin-bottom: 2rem;">
-            Met snelle nabewerking en scherp oog voor detail lever je een aftermovie op die deelnemers willen delen.
-          </p>
-          <a href="contact.html" class="btn btn-primary">Vraag een offerte aan <span class="btn-arrow">→</span></a>
-        </div>
-        <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 16/9; direction: ltr;">
-          <video style="width: 100%; height: 100%; object-fit: cover; display: block;" controls preload="metadata" poster="Thumbnails/Thumbnail_Topsportgala.png">
-            <source src="Video/aftermovie/H20_Topsportgala_Aftermovie_V3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="featured__grid fade-up" style="margin-bottom: 6rem;">
-        <div>
-          <div class="service-card__icon" style="margin-bottom: 1.5rem; width: 70px; height: 70px; font-size: 2rem; border-radius: 16px; background: rgba(244,128,49,0.1); display:flex; align-items:center; justify-content:center;">💍</div>
-          <div class="section-label">Dienst 03</div>
-          <h2 class="section-title">Bruiloft<span>video's</span></h2>
-          <p style="color: var(--gray-light); line-height: 1.8; margin-bottom: 1.5rem;">
-            Jouw trouwdag is een van de mooiste dagen van je leven. Wij zorgen ervoor dat elk bijzonder moment voor altijd bewaard blijft — van de voorbereiding tot de eerste dans.
-          </p>
-          <p style="color: var(--gray-light); line-height: 1.8; margin-bottom: 2rem;">
-            Met een discreet en professioneel aanwezige camera-crew vangen we de authentieke emoties en sfeer van jullie bruiloft op.
-          </p>
-          <a href="contact.html" class="btn btn-primary">Vraag een offerte aan <span class="btn-arrow">→</span></a>
-        </div>
-        <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 16/9;">
-          <video style="width: 100%; height: 100%; object-fit: cover; display: block;" controls preload="metadata" poster="Thumbnails/Thumbnail_Bruiloft_Tim%26Felicia.png">
-            <source src="Video/bruiloft/Bruiloft_Webpage_lowres.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- Grid of remaining services -->
-      <div class="services__grid">
-        <div class="service-card fade-up">
-          <div class="service-card__icon">📱</div>
-          <h3 class="service-card__title">Social Media Promotie & Beheer</h3>
-          <p class="service-card__text">Professionele content creatie voor Instagram, TikTok, YouTube en LinkedIn. Inclusief strategie, planning en community management voor maximaal bereik.</p>
-          <br>
-          <a href="contact.html" style="color: var(--orange); font-size: 0.85rem; font-weight: 700; font-family: var(--font-heading); letter-spacing: 0.05em;">Meer info →</a>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">🎥</div>
-          <h3 class="service-card__title">Documentaires</h3>
-          <p class="service-card__text">Meeslepende documentaires die verhalen vertellen met diepgang en emotie. Van kortfilms tot lange documentaires over mensen, bedrijven en maatschappelijke thema's.</p>
-          <br>
-          <a href="contact.html" style="color: var(--orange); font-size: 0.85rem; font-weight: 700; font-family: var(--font-heading); letter-spacing: 0.05em;">Meer info →</a>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-card__icon">📸</div>
-          <h3 class="service-card__title">Fotografie</h3>
-          <p class="service-card__text">Professionele fotografie voor bedrijven, evenementen, producten, headshots en persoonlijke projecten. Hoge kwaliteit beelden die jouw verhaal vertellen.</p>
-          <br>
-          <a href="contact.html" style="color: var(--orange); font-size: 0.85rem; font-weight: 700; font-family: var(--font-heading); letter-spacing: 0.05em;">Meer info →</a>
-        </div>
+      <div class="reveal-right">
+        <p class="section__tag">01</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:1.25rem;line-height:1.15">Event Aftermovies <span style="color:var(--clr-orange)">&amp; Registraties</span></h2>
+        <p style="color:var(--clr-white-60);line-height:1.85;margin-bottom:1rem;font-size:.95rem">Jouw event verdient meer dan een fotogalerij. Ik vang de energie, emotie en sfeer op in een cinematische aftermovie die ook na het event blijft resoneren. Bij medewerkers, sponsors en bezoekers.</p>
+        <p style="color:var(--clr-white-60);line-height:1.85;font-size:.95rem">Voor volledige registraties zorg ik voor meerdere camerahoeken, live-switching mogelijkheden en snelle doorlooptijden.</p>
+        <ul style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem">
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Conferenties &amp; congressen</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Bedrijfsevenementen &amp; kick-offs</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Vastgoedbeurzen &amp; productlanceringen</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Interviews &amp; spreker registraties</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="section-label">Klaar om te starten?</div>
-      <h2 class="section-title">Welke dienst past<br><span>bij jou?</span></h2>
-      <p class="section-subtitle">Neem contact op voor een vrijblijvend gesprek over jouw project en wensen.</p>
-      <div class="cta-section__buttons">
-        <a href="contact.html" class="btn btn-primary">Neem Contact Op <span class="btn-arrow">→</span></a>
-        <a href="pakketten.html" class="btn btn-outline">Bekijk Pakketten</a>
+    <!-- Dienst 2 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--clr-dark-border)">
+      <div class="reveal-left">
+        <p class="section__tag">02</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:1.25rem;line-height:1.15">Case Studies</h2>
+        <p style="color:var(--clr-white-60);line-height:1.85;margin-bottom:1rem;font-size:.95rem">Niets overtuigt een prospect sneller dan het verhaal van een tevreden klant. Ik produceer video-case studies die authentiek zijn, professioneel ogen en conversies genereren.</p>
+        <p style="color:var(--clr-white-60);line-height:1.85;font-size:.95rem">Van interview tot locatieopname, volledig geproduceerd en klaar voor LinkedIn, website en salestrajecten.</p>
+        <ul style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem">
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Klant- en succesverhalen</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Project-showcases</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Financiële sector &amp; bouw</li>
+        </ul>
+      </div>
+      <div class="reveal-right">
+        <div style="aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;background:linear-gradient(135deg,#0e1a2a,#181818);display:flex;align-items:center;justify-content:center;font-size:4rem;color:rgba(255,255,255,.08);border:1px solid var(--clr-dark-border)">📊</div>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">
-            <div class="footer__brand-icon"><img src="images/logo.png" alt="ONEMANCREW logo"></div>
-            ONEMANCREW
+    <!-- Dienst 3 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--clr-dark-border)">
+      <div class="reveal-left">
+        <div style="aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;background:linear-gradient(135deg,#1a2a15,#181818);display:flex;align-items:center;justify-content:center;font-size:4rem;color:rgba(255,255,255,.08);border:1px solid var(--clr-dark-border)">🏢</div>
+      </div>
+      <div class="reveal-right">
+        <p class="section__tag">03</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:1.25rem;line-height:1.15">Interne <span style="color:var(--clr-orange)">Infovideo's</span></h2>
+        <p style="color:var(--clr-white-60);line-height:1.85;margin-bottom:1rem;font-size:.95rem">Interne communicatie hoeft niet saai te zijn. Ik maak heldere, aantrekkelijke video's waarmee je medewerkers effectief bereikt, ongeacht kantoor, afdeling of land.</p>
+        <ul style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem">
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Strategievideo's &amp; jaarplannen</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Onboarding &amp; instructievideo's</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> CEO- en managementboodschappen</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dienst 4 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--clr-dark-border)">
+      <div class="reveal-left">
+        <p class="section__tag">04</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:1.25rem;line-height:1.15">Recruitment <span style="color:var(--clr-orange)">Video's</span></h2>
+        <p style="color:var(--clr-white-60);line-height:1.85;margin-bottom:1rem;font-size:.95rem">De arbeidsmarkt is competitief. Met een authentieke recruitment video laat je zien wie je écht bent als werkgever en trek je kandidaten aan die passen bij jouw cultuur.</p>
+        <ul style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem">
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Employer branding films</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Dag-in-het-leven video's</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Cultuur- en team films</li>
+        </ul>
+      </div>
+      <div class="reveal-right">
+        <div style="aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;background:linear-gradient(135deg,#2a1520,#181818);display:flex;align-items:center;justify-content:center;font-size:4rem;color:rgba(255,255,255,.08);border:1px solid var(--clr-dark-border)">👥</div>
+      </div>
+    </div>
+
+    <!-- Dienst 5 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0">
+      <div class="reveal-left">
+        <div style="aspect-ratio:16/10;border-radius:var(--radius-md);overflow:hidden;background:linear-gradient(135deg,#1a1a2a,#181818);display:flex;align-items:center;justify-content:center;font-size:4rem;color:rgba(255,255,255,.08);border:1px solid var(--clr-dark-border)">🚀</div>
+      </div>
+      <div class="reveal-right">
+        <p class="section__tag">05</p>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;margin-bottom:1.25rem;line-height:1.15">Promotie<span style="color:var(--clr-orange)">video's</span></h2>
+        <p style="color:var(--clr-white-60);line-height:1.85;margin-bottom:1rem;font-size:.95rem">Of het nu gaat om een productlancering, dienst of campagne. ik maak promotievideo's die niet alleen opvallen, maar ook converteren. Cinmatisch gemaakt, resultaatgericht ontworpen.</p>
+        <ul style="margin-top:1.5rem;display:flex;flex-direction:column;gap:.6rem">
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Productlanceringen</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Campagnevideos</li>
+          <li style="display:flex;gap:.75rem;align-items:center;font-size:.875rem;color:var(--clr-white-60)"><span style="color:var(--clr-orange)">✓</span> Vastgoed &amp; bouwprojecten</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" style="background:var(--clr-dark-2);border-top:1px solid var(--clr-dark-border);border-bottom:1px solid var(--clr-dark-border)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start">
+      <div class="reveal">
+        <p class="section__tag">Werkwijze</p>
+        <h2 class="section__title">Van brief tot <span>eindproduct</span></h2>
+        <p class="section__subtitle">Een helder proces zonder verrassingen. Jij weet altijd waar we staan.</p>
+        <div style="margin-top:3rem">
+          <a href="contact.html" class="btn btn--primary btn--lg">Start jouw project <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="process-list">
+          <div class="process-item">
+            <div class="process-item__num">01</div>
+            <div>
+              <h3 class="process-item__title">Intake &amp; Briefing</h3>
+              <p class="process-item__desc">We bespreken jouw doelen, doelgroep, stijl en planning. Ik stel de juiste vragen om jouw visie volledig te begrijpen.</p>
+            </div>
           </div>
-          <p class="footer__desc">Professionele videoproductie en fotografie. Wij maken beelden die mensen blijven voelen én onthouden.</p>
-          <div class="footer__social">
-            <a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-            <a href="mailto:contact@onemancrew.nl" aria-label="Email">✉️</a>
-            <a href="tel:+31628637074" aria-label="Telefoon">📞</a>
+          <div class="process-item">
+            <div class="process-item__num">02</div>
+            <div>
+              <h3 class="process-item__title">Concept &amp; Planning</h3>
+              <p class="process-item__desc">Ik werk een concept uit met opzet, shotlist en tijdlijn. Helder, concreet en in lijn met jouw merk.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <div class="process-item__num">03</div>
+            <div>
+              <h3 class="process-item__title">Productie</h3>
+              <p class="process-item__desc">Opname met professionele cinema-apparatuur. Flexibel, efficiënt en altijd met oog voor detail.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <div class="process-item__num">04</div>
+            <div>
+              <h3 class="process-item__title">Post-productie</h3>
+              <p class="process-item__desc">Montage, kleurcorrectie, muziek en sound design. Jij krijgt een eerste versie voor feedback.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <div class="process-item__num">05</div>
+            <div>
+              <h3 class="process-item__title">Oplevering</h3>
+              <p class="process-item__desc">Na finale goedkeuring lever ik in alle gewenste formaten en resoluties. klaar voor elk platform.</p>
+            </div>
           </div>
         </div>
-        <div>
-          <div class="footer__col-title">Navigatie</div>
-          <ul class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="diensten.html">Diensten</a></li>
-            <li><a href="pakketten.html">Pakketten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Informatie</div>
-          <ul class="footer__links">
-            <li><a href="over.html">Over ONEMANCREW</a></li>
-            <li><a href="faq.html">Veelgestelde Vragen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Contact</div>
-          <ul class="footer__links">
-            <li><a href="mailto:contact@onemancrew.nl">contact@onemancrew.nl</a></li>
-            <li><a href="tel:+31628637074">+31 6 28637074</a></li>
-            <li><a href="https://www.instagram.com/onemancrew.nl" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2024 <span>ONEMANCREW</span>. Alle rechten voorbehouden.</p>
-        <p class="footer__copy">Made with ❤️ for great content</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- PRICING BAND -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="pricing-band">
+        <div>
+          <p class="pricing-band__label">Investering</p>
+          <div class="pricing-band__range" style="font-size:clamp(1.4rem,2.5vw,2rem)">Offerte op maat</div>
+        </div>
+        <p class="pricing-band__note">De investering hangt af van projectomvang, locatie, opnamedagen en productietijd. Ik maak altijd een transparante, gespecificeerde offerte, zodat je precies weet waar je aan toe bent.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg">Offerte Aanvragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__content">
+      <p class="section__tag">Samen aan de slag</p>
+      <h2 class="cta-section__title">Welke video past bij <span style="color:var(--clr-orange)">jouw doel</span>?</h2>
+      <p class="cta-section__subtitle">Ik denk gratis mee in een vrijblijvend kennismakingsgesprek.</p>
+      <div class="cta-section__actions">
+        <a href="contact.html" class="btn btn--primary btn--lg">Plan een gesprek</a>
+        <a href="portfolio.html" class="btn btn--outline btn--lg">Bekijk Portfolio <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="footer__logo">
+          <img src="logo/logo.png" alt="ONEMANCREW" style="height:32px;width:auto;display:block" />
+        </a>
+        <p class="footer__brand-text">Cinematische videoproductie voor B2B bedrijven in Nederland en internationaal.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Navigatie</h4>
+        <ul class="footer__list">
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="over.html">Over Jaimy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Diensten</h4>
+        <ul class="footer__list">
+          <li><span>Event Aftermovies</span></li>
+          <li><span>Event Registraties</span></li>
+          <li><span>Case Studies</span></li>
+          <li><span>Interne Video's</span></li>
+          <li><span>Recruitment Video's</span></li>
+          <li><span>Promotievideo's</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__list">
+          <li><span>Nederland &amp; Internationaal</span></li>
+          <li><a href="mailto:info@onemancrew.nl">info@onemancrew.nl</a></li>
+          <li><span>Offerte altijd op maat</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 ONEMANCREW &middot; Jaimy van der Meer</p>
+      <p>Alle rechten voorbehouden</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

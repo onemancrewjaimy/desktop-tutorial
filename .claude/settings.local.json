@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(powershell -command ' *)",
+      "Bash(powershell -command \"winget --version\")",
+      "Bash(powershell -command \"\\(Get-Command winget -ErrorAction SilentlyContinue\\).Source\")",
+      "Bash(powershell -command \"Get-ChildItem 'C:\\\\' -Recurse -Filter 'ffmpeg.exe' -ErrorAction SilentlyContinue | Select-Object -First 3 FullName\")"
+    ]
+  }
+}
