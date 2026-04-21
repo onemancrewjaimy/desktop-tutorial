@@ -96,7 +96,10 @@
           <h3 class="form-title">Offerte aanvragen</h3>
           <p class="form-subtitle">Vul het formulier in, ik stuur je een vrijblijvende offerte op maat.</p>
 
-          <form id="contactForm" novalidate>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="c36d3f33-48b7-4d54-b849-a5e7c8aebf29">
+            <input type="hidden" name="subject" value="Nieuwe offerte aanvraag via ONEMANCREW.nl">
+            <input type="hidden" name="from_name" value="ONEMANCREW Website">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label req" for="naam">Naam</label>
@@ -150,6 +153,7 @@
             <button type="submit" class="btn btn--primary btn--lg form-submit">
               Verzend Aanvraag <span class="arrow">→</span>
             </button>
+            <div id="formResult" style="display:none;margin-top:1.25rem;padding:1rem 1.25rem;border-radius:var(--radius-sm);font-size:.9rem;font-weight:500"></div>
           </form>
         </div>
       </div>

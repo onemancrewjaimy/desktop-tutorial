@@ -267,22 +267,38 @@ document.querySelectorAll('.portfolio-item__video').forEach(video => {
 })();
 
 /* ================================
-   CONTACT FORM
+   CONTACT FORM — Web3Forms
 ================================ */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    const orig = btn.textContent;
-    btn.textContent = 'Verzonden! ✓';
-    btn.style.background = '#2e7d45';
+    const btn    = form.querySelector('.form-submit');
+    const result = document.getElementById('formResult');
+
+    btn.textContent = 'Verzenden...';
     btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.style.background = '';
+
+    try {
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        result.textContent = 'Bedankt! Jouw aanvraag is ontvangen. Ik kom binnen 24 uur bij je terug.';
+        result.style.cssText = 'display:block;margin-top:1.25rem;padding:1rem 1.25rem;border-radius:var(--radius-sm);font-size:.9rem;font-weight:500;background:rgba(46,125,69,.15);border:1px solid rgba(46,125,69,.4);color:#6fcf97';
+        form.reset();
+      } else {
+        throw new Error('mislukt');
+      }
+    } catch {
+      result.textContent = 'Er is iets misgegaan. Stuur je bericht direct naar contact@onemancrew.nl.';
+      result.style.cssText = 'display:block;margin-top:1.25rem;padding:1rem 1.25rem;border-radius:var(--radius-sm);font-size:.9rem;font-weight:500;background:rgba(180,40,40,.15);border:1px solid rgba(180,40,40,.4);color:#eb5757';
+    } finally {
+      btn.textContent = 'Verzend Aanvraag →';
       btn.disabled = false;
-      form.reset();
-    }, 3500);
+    }
   });
 }
