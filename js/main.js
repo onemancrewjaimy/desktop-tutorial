@@ -19,6 +19,13 @@ function initMarquee(track, pxPerFrame) {
 window.addEventListener('DOMContentLoaded', () => {
   initMarquee(document.querySelector('.marquee-track:not(.marquee-track--clients)'), -0.5);
   initMarquee(document.querySelector('.marquee-track--clients'), 0.5);
+
+  // Hero video: force play on mobile (browsers may block autoplay attribute)
+  const heroVideo = document.querySelector('.hero__video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.play().catch(() => {});
+  }
 });
 
 /* ================================
