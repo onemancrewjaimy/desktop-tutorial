@@ -4,10 +4,16 @@
 function initMarquee(track, pxPerFrame) {
   if (!track) return;
   track.style.animation = 'none';
-  const half = track.scrollWidth / 2;
-  let x = pxPerFrame < 0 ? 0 : -half;
+  let x = 0;
+  let half = 0;
 
   (function tick() {
+    if (!half) {
+      half = track.scrollWidth / 2;
+      x = pxPerFrame < 0 ? 0 : -half;
+      requestAnimationFrame(tick);
+      return;
+    }
     x += pxPerFrame;
     if (pxPerFrame < 0 && x <= -half) x = 0;
     if (pxPerFrame > 0 && x >= 0)    x = -half;
