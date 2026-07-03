@@ -1151,6 +1151,21 @@ input, textarea, select { font-family:var(--font); }
   font-size: .75rem;
   color: var(--clr-white-30);
 }
+.footer__credit {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--clr-dark-border);
+  text-align: center;
+  font-size: .75rem;
+  color: var(--clr-white-30);
+}
+.footer__credit a {
+  color: var(--clr-white-60);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+.footer__credit a:hover { color: var(--clr-orange); }
 
 /* ================================
    ROI / VALUE SECTION
