@@ -26,11 +26,11 @@
     --radius:16px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
   body{
     font-family:'Poppins',system-ui,sans-serif;
     background:var(--bg);color:var(--text);
-    min-height:100vh;overflow-x:hidden;
+    min-height:100vh;overflow-x:hidden;width:100%;
   }
 
   /* ---------- Mouse glow ---------- */
@@ -242,6 +242,9 @@
     *{transition:none!important;animation:none!important}
     #glow{display:none}
   }
+  @media (hover:none), (pointer:coarse){
+    #glow{display:none}
+  }
 
   /* ---------- Mobile ---------- */
   @media(max-width:600px){
@@ -444,7 +447,8 @@ const FINANCE_EMAIL = 'contact@onemancrew.nl';
 (function(){
   const glow = document.getElementById('glow');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce) return;
+  const noHover = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  if(reduce || noHover) return;
   window.addEventListener('pointermove', e=>{
     glow.style.transform = 'translate('+(e.clientX-320)+'px,'+(e.clientY-320)+'px)';
   }, {passive:true});
