@@ -51,6 +51,7 @@
   .rec{width:7px;height:7px;border-radius:99px;background:var(--red);animation:blink 1.6s infinite}
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
+  .header-actions{display:flex;align-items:center;gap:10px}
   .month-nav{display:flex;align-items:center;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:5px}
   .month-nav button{background:transparent;border:none;color:var(--text);width:36px;height:36px;border-radius:9px;cursor:pointer;font-size:17px;transition:.15s}
   .month-nav button:hover{background:var(--accent-soft);color:var(--accent)}
@@ -117,7 +118,9 @@
     transition:.2s;
   }
   .fixed-item:hover{border-color:var(--line);transform:translateX(3px)}
-  .fixed-item .name{font-size:13px;font-weight:500}
+  .fixed-item > div:first-child{min-width:0}
+  .fixed-item .name{font-size:13px;font-weight:500;overflow-wrap:break-word}
+  .fixed-item .right{flex-shrink:0}
   .fixed-item .meta{font-size:10.5px;color:var(--dim);font-weight:300;display:flex;align-items:center;gap:6px}
   .fixed-item .right{display:flex;align-items:center;gap:10px}
   .fixed-item .amount{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--accent)}
@@ -127,7 +130,8 @@
 
   /* ---------- Forms ---------- */
   form.inline{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;align-items:end}
-  .field{display:flex;flex-direction:column;gap:6px}
+  .field{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .field-wide{min-width:160px}
   .field label{font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
   input,select{
     background:var(--surface-2);border:1px solid var(--line);color:var(--text);
@@ -154,7 +158,8 @@
 
   /* ---------- Transacties ---------- */
   .tx-card{margin-bottom:22px}
-  table{width:100%;border-collapse:collapse;margin-top:20px}
+  .table-scroll{overflow-x:auto;margin-top:20px}
+  table{width:100%;min-width:420px;border-collapse:collapse}
   th{font-size:9px;text-transform:uppercase;letter-spacing:.2em;color:var(--dim);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
   td{padding:11px 10px;font-size:13px;border-bottom:1px solid #2e2e2e}
   tbody tr{transition:background .15s}
@@ -237,6 +242,24 @@
     *{transition:none!important;animation:none!important}
     #glow{display:none}
   }
+
+  /* ---------- Mobile ---------- */
+  @media(max-width:600px){
+    .wrap{padding:20px 16px 70px}
+    .card{padding:18px}
+    header{flex-wrap:wrap;row-gap:14px}
+    .brand{gap:10px}
+    .header-actions{width:100%;justify-content:space-between}
+    .month-nav{flex:1}
+    #monthLabel{min-width:0;flex:1;font-size:11.5px}
+    .month-nav button{width:32px;height:32px;font-size:15px;flex-shrink:0}
+    .lock-btn{width:40px;height:40px;flex-shrink:0}
+    .kpi{padding:16px 18px}
+    .kpi .value{font-size:22px}
+    form.inline{grid-template-columns:1fr}
+    .field-wide{min-width:0}
+    .gate-box{padding:32px 22px}
+  }
 </style>
 </head>
 <body>
@@ -271,7 +294,7 @@
         <div class="tag"><span class="rec"></span> budget · rec</div>
       </div>
     </div>
-    <div style="display:flex;align-items:center;gap:10px">
+    <div class="header-actions">
       <div class="month-nav">
         <button id="prevMonth" aria-label="Vorige maand">&#8249;</button>
         <div id="monthLabel"></div>
@@ -336,7 +359,7 @@
     <div class="hint">Terugkerende bedragen tellen automatisch mee in elke maand</div>
     <div class="fixed-list" id="fixedList"></div>
     <form class="inline" id="fixedForm">
-      <div class="field" style="min-width:160px"><label for="fxName">Naam</label><input id="fxName" placeholder="bijv. Huur, Adobe CC" required></div>
+      <div class="field field-wide"><label for="fxName">Naam</label><input id="fxName" placeholder="bijv. Huur, Adobe CC" required></div>
       <div class="field"><label for="fxCat">Categorie</label><select id="fxCat"></select></div>
       <div class="field"><label for="fxType">Type</label>
         <select id="fxType">
@@ -362,17 +385,19 @@
         </div>
       </div>
       <div class="field"><label for="txDate">Datum</label><input id="txDate" type="date" required></div>
-      <div class="field" style="min-width:160px"><label for="txDesc">Omschrijving</label><input id="txDesc" placeholder="bijv. Boodschappen AH" required></div>
+      <div class="field field-wide"><label for="txDesc">Omschrijving</label><input id="txDesc" placeholder="bijv. Boodschappen AH" required></div>
       <div class="field"><label for="txCat">Categorie</label><select id="txCat"></select></div>
       <div class="field"><label for="txAmount">Bedrag</label><input id="txAmount" type="number" step="0.01" min="0.01" placeholder="0,00" required></div>
       <button class="btn" type="submit">Opslaan</button>
     </form>
-    <table>
-      <thead>
-        <tr><th>Datum</th><th>Omschrijving</th><th class="hide-m">Categorie</th><th class="amt">Bedrag</th><th></th></tr>
-      </thead>
-      <tbody id="txBody"></tbody>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Datum</th><th>Omschrijving</th><th class="hide-m">Categorie</th><th class="amt">Bedrag</th><th></th></tr>
+        </thead>
+        <tbody id="txBody"></tbody>
+      </table>
+    </div>
     <div class="tx-empty" id="txEmpty">Nog geen transacties in deze maand</div>
   </section>
 
