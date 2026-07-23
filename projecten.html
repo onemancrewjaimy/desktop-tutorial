@@ -169,7 +169,10 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
 }
 @media(max-width:720px){
   .menu{display:none}
-  .menu.open{display:flex;position:fixed;inset:0;top:72px;background:rgba(20,20,20,.98);flex-direction:column;align-items:flex-start;padding:50px clamp(24px,5vw,80px);gap:34px}
+  nav.menu-open{bottom:0;display:flex;flex-direction:column;background:rgba(20,20,20,.98);overflow-y:auto}
+  nav.menu-open::before{display:none}
+  nav.menu-open .nav-in{flex:none}
+  nav.menu-open .menu{display:flex;flex-direction:column;align-items:flex-start;padding:10px clamp(24px,5vw,80px) 50px;gap:34px}
   .burger{display:block}
 }
 </style>
@@ -179,7 +182,7 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
 <nav>
   <div class="nav-in">
     <a href="index.html" class="logo">ONEMAN<span>CREW</span></a>
-    <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <button class="burger" aria-label="Menu" onclick="this.closest('nav').classList.toggle('menu-open')">☰</button>
     <ul class="menu" id="menu">
       <li><a href="index.html#aanpak">Aanpak</a></li>
       <li><a href="index.html#jaarplan">Jaarplan</a></li>
@@ -308,7 +311,7 @@ projs.forEach(p=>p.addEventListener('click',()=>{
 function closeModal(){modal.classList.remove('open');mVideo.innerHTML=emptyHTML;document.body.style.overflow=''}
 modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
 addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('menu-open')));
 </script>
 </body>
 </html>
