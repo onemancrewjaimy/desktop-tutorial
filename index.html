@@ -65,7 +65,8 @@ nav{
   background:linear-gradient(180deg,rgba(20,20,20,.9),rgba(20,20,20,0));
   transition:background .4s;
 }
-nav.solid{background:rgba(20,20,20,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav.solid{background:rgba(20,20,20,.94);border-bottom:1px solid var(--line)}
+nav.solid::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(16px)}
 .nav-in{
   max-width:1360px;margin:0 auto;padding:26px clamp(24px,5vw,80px);
   display:flex;align-items:center;justify-content:space-between;

@@ -41,7 +41,8 @@ a{color:inherit}
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
 
 /* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(20,20,20,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(20,20,20,.94);border-bottom:1px solid var(--line)}
+nav::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(16px)}
 .nav-in{max-width:1360px;margin:0 auto;padding:26px clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between}
 .logo{font-weight:600;font-size:13px;letter-spacing:.34em;text-decoration:none}
 .logo span{color:var(--accent)}
