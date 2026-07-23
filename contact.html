@@ -56,6 +56,27 @@ nav::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur
 .menu a.active::after,.menu a.cta::after{transform:scaleX(1)}
 .burger{display:none;background:none;border:0;color:var(--white);font-size:22px;cursor:pointer;position:relative;z-index:10000}
 
+/* ---------- mobile nav dialog ---------- */
+.menu-dialog{
+  position:fixed;inset:0;margin:0;padding:0;border:0;
+  width:100%;height:100%;max-width:none;max-height:none;
+  background:#141414;color:var(--white);
+}
+.menu-dialog::backdrop{background:#141414}
+.menu-dialog-close{
+  position:absolute;top:26px;right:clamp(24px,5vw,80px);
+  background:none;border:0;color:var(--white);font-size:20px;cursor:pointer;line-height:1;
+}
+.menu-dialog-list{
+  list-style:none;display:flex;flex-direction:column;align-items:flex-start;
+  padding:100px clamp(24px,5vw,80px) 50px;gap:34px;height:100%;overflow-y:auto;
+}
+.menu-dialog-list a{
+  text-decoration:none;font-size:16px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--grey);
+}
+.menu-dialog-list a.cta{color:var(--accent)}
+
 /* head */
 .page-head{padding:clamp(160px,24vh,260px) 0 clamp(60px,9vh,100px)}
 .page-head .display{font-size:clamp(44px,7vw,104px);margin-top:30px;padding-bottom:.06em}
@@ -178,7 +199,7 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
   <div class="nav-in">
     <div class="nav-bar">
       <a href="index.html" class="logo">ONEMAN<span>CREW</span></a>
-      <button class="burger" aria-label="Menu" onclick="toggleNavMenu()">☰</button>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('menuDialog').showModal()">☰</button>
     </div>
     <ul class="menu" id="menu">
       <li><a href="index.html#aanpak">Aanpak</a></li>
@@ -190,6 +211,18 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
     </ul>
   </div>
 </nav>
+
+<dialog id="menuDialog" class="menu-dialog">
+  <button class="menu-dialog-close" aria-label="Sluiten" onclick="document.getElementById('menuDialog').close()">✕</button>
+  <ul class="menu-dialog-list">
+    <li><a href="index.html#aanpak">Aanpak</a></li>
+    <li><a href="index.html#jaarplan">Jaarplan</a></li>
+    <li><a href="index.html#diensten">Diensten</a></li>
+    <li><a href="projecten.html">Projecten</a></li>
+    <li><a href="over.html">Over</a></li>
+    <li><a href="contact.html" class="cta">Plan een gesprek</a></li>
+  </ul>
+</dialog>
 
 <section class="page-head">
   <div class="wrap">
@@ -317,18 +350,6 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
 </footer>
 
 <script>
-// mobiel menu: direct via inline stijlen aansturen, geen CSS-cascade twijfel
-function toggleNavMenu(){
-  const menu = document.getElementById('menu');
-  if(menu.style.display === 'flex'){
-    menu.removeAttribute('style');
-    document.body.style.overflow = '';
-  }else{
-    menu.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:#141414;z-index:9999;align-items:flex-start;padding:100px 24px 50px;gap:34px;overflow-y:auto;';
-    document.body.style.overflow = 'hidden';
-  }
-}
-
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
@@ -362,10 +383,7 @@ async function send(e){
   }
   return false;
 }
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{
-  document.getElementById('menu').removeAttribute('style');
-  document.body.style.overflow = '';
-}));
+document.querySelectorAll('.menu-dialog-list a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menuDialog').close()));
 </script>
 </body>
 </html>
