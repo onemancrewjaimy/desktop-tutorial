@@ -87,7 +87,7 @@ nav.solid::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filte
 .menu a:hover::after{transform:scaleX(1);transform-origin:left}
 .menu a.cta{color:var(--white)}
 .menu a.cta::after{transform:scaleX(1)}
-.burger{display:none;background:none;border:0;color:var(--white);font-size:22px;cursor:pointer}
+.burger{display:none;background:none;border:0;color:var(--white);font-size:22px;cursor:pointer;position:relative;z-index:10000}
 
 /* ---------- hero ---------- */
 header{
@@ -313,14 +313,6 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
 }
 @media(max-width:720px){
   .menu{display:none}
-  nav.menu-open{bottom:0;background:rgba(20,20,20,.98);overflow-y:auto}
-  nav.menu-open::before{display:none}
-  nav.menu-open .nav-in{flex-direction:column;align-items:stretch}
-  nav.menu-open .nav-bar{flex:none}
-  nav.menu-open .menu{
-    display:flex;flex-direction:column;align-items:flex-start;
-    padding:30px clamp(24px,5vw,80px) 50px;gap:34px;
-  }
   .burger{display:block}
   .tl-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -332,7 +324,7 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
   <div class="nav-in">
     <div class="nav-bar">
       <a href="#top" class="logo">ONEMAN<span>CREW</span></a>
-      <button class="burger" aria-label="Menu" onclick="this.closest('nav').classList.toggle('menu-open')">☰</button>
+      <button class="burger" aria-label="Menu" onclick="toggleNavMenu()">☰</button>
     </div>
     <ul class="menu" id="menu">
       <li><a href="#aanpak">Aanpak</a></li>
@@ -576,6 +568,18 @@ footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
 </footer>
 
 <script>
+// mobiel menu: direct via inline stijlen aansturen, geen CSS-cascade twijfel
+function toggleNavMenu(){
+  const menu = document.getElementById('menu');
+  if(menu.style.display === 'flex'){
+    menu.removeAttribute('style');
+    document.body.style.overflow = '';
+  }else{
+    menu.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:#141414;z-index:9999;align-items:flex-start;padding:100px 24px 50px;gap:34px;overflow-y:auto;';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
 // hero load
 addEventListener('load',()=>document.querySelector('.hero').classList.add('loaded'));
 setTimeout(()=>document.querySelector('.hero').classList.add('loaded'),300);
@@ -599,7 +603,10 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
 document.querySelectorAll('.rv,.rule:not(.in),#tl').forEach(el=>io.observe(el));
 
 // close mobile menu
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('menu-open')));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('menu').removeAttribute('style');
+  document.body.style.overflow = '';
+}));
 </script>
 </body>
 </html>
