@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Een selectie recente producties van ONEMANCREW: aftermovies, klantcases en venue promotiefilms voor evenementenlocaties.">
+<title>Projecten — ONEMANCREW</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="logo/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#141414;
+  --bg:#202020;
+  --panel:#262626;
+  --white:#f4f1ec;
+  --grey:#8f8b85;
+  --accent:#d07335;
+  --line:rgba(244,241,236,.10);
+  --line-strong:rgba(244,241,236,.2);
+  --ease:cubic-bezier(.22,.9,.24,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Poppins',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--accent);color:var(--black)}
+:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
+a{color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(24px,5vw,80px)}
+.label{font-size:10px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--grey)}
+.label.oj{color:var(--accent)}
+.display{font-weight:100;line-height:1.06}
+.display em{font-style:italic;font-weight:100;color:var(--accent)}
+.display b{font-weight:400}
+.body{font-size:15px;line-height:2;color:var(--grey);font-weight:300}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}.rv{opacity:1;transform:none}}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(20,20,20,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1360px;margin:0 auto;padding:26px clamp(24px,5vw,80px);display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:600;font-size:13px;letter-spacing:.34em;text-decoration:none}
+.logo span{color:var(--accent)}
+.menu{display:flex;gap:44px;list-style:none;align-items:center}
+.menu a{text-decoration:none;font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--grey);transition:color .3s;position:relative;padding-bottom:4px}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.menu a:hover{color:var(--white)}
+.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.menu a.active{color:var(--white)}
+.menu a.active::after,.menu a.cta::after{transform:scaleX(1)}
+.menu a.cta{color:var(--white)}
+.burger{display:none;background:none;border:0;color:var(--white);font-size:22px;cursor:pointer}
+
+/* page head */
+.page-head{padding:clamp(160px,24vh,260px) 0 clamp(60px,9vh,100px);background:var(--bg)}
+.page-head .display{font-size:clamp(44px,7vw,110px);margin-top:30px}
+.page-head .body{margin-top:34px;max-width:520px}
+
+/* filters */
+.filters{
+  display:flex;gap:clamp(20px,3vw,44px);flex-wrap:wrap;align-items:center;
+  padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  margin-bottom:clamp(50px,8vh,90px);
+}
+.filters .fl{font-size:10px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--grey);margin-right:10px}
+.fbtn{
+  background:none;border:0;cursor:pointer;font-family:'Poppins',sans-serif;
+  font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--grey);
+  padding:6px 0;position:relative;transition:color .3s;
+}
+.fbtn::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.fbtn:hover{color:var(--white)}
+.fbtn.on{color:var(--white)}
+.fbtn.on::after{transform:scaleX(1);transform-origin:left}
+.count{margin-left:auto;font-size:11px;letter-spacing:.2em;color:var(--grey);font-variant-numeric:tabular-nums}
+.count b{color:var(--accent);font-weight:500}
+
+/* project grid */
+.grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,3vw,44px);
+  padding-bottom:clamp(120px,16vh,200px);
+}
+.proj{grid-column:span 6;text-decoration:none;display:block;cursor:pointer}
+.proj.wide{grid-column:span 12}
+.proj.third{grid-column:span 4}
+.thumb{
+  position:relative;overflow:hidden;background:var(--panel);
+  aspect-ratio:16/9;
+}
+.proj.wide .thumb{aspect-ratio:21/9}
+.thumb .ph{
+  position:absolute;inset:0;transition:transform 1.2s var(--ease);
+  display:flex;align-items:center;justify-content:center;
+}
+.proj:hover .thumb .ph{transform:scale(1.045)}
+.thumb .ph span{
+  font-size:10px;font-weight:600;letter-spacing:.5em;text-transform:uppercase;color:rgba(244,241,236,.28);
+}
+.thumb .ph-img{width:100%;height:100%;object-fit:cover}
+.thumb .play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;
+  opacity:0;transition:opacity .5s;
+}
+.proj:hover .play{opacity:1}
+.play i{
+  width:78px;height:78px;border:1px solid var(--white);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-style:normal;
+  background:rgba(20,20,20,.4);backdrop-filter:blur(6px);
+  transition:all .4s var(--ease);
+}
+.proj:hover .play i{border-color:var(--accent);color:var(--accent)}
+.play i::before{content:"";border-left:14px solid currentColor;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:5px}
+.pmeta{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:24px 0 6px;border-bottom:1px solid var(--line);transition:border-color .4s}
+.proj:hover .pmeta{border-color:var(--accent)}
+.pmeta h3{font-size:clamp(19px,1.8vw,26px);font-weight:200;transition:color .4s}
+.proj:hover .pmeta h3{color:var(--accent)}
+.pmeta .cat{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--grey);white-space:nowrap}
+.pdesc{margin-top:14px;font-size:13px;line-height:1.85;color:var(--grey);max-width:520px}
+.proj.hide{display:none}
+
+/* modal */
+.modal{
+  position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  background:rgba(10,10,10,.92);backdrop-filter:blur(10px);padding:clamp(20px,4vw,60px);
+}
+.modal.open{display:flex}
+.modal-in{width:min(1100px,100%)}
+.modal-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;gap:20px}
+.modal-top h3{font-weight:100;font-size:clamp(20px,2.4vw,32px)}
+.modal-close{
+  background:none;border:0;color:var(--grey);cursor:pointer;font-family:'Poppins',sans-serif;
+  font-size:10px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;transition:color .3s;
+}
+.modal-close:hover{color:var(--accent)}
+.modal-video{aspect-ratio:16/9;background:var(--black);border:1px solid var(--line);position:relative}
+.modal-video iframe,.modal-video video{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--black)}
+.modal-video .empty{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  text-align:center;padding:30px;
+}
+.modal-video .empty .label{letter-spacing:.3em}
+.modal-video .empty p{font-size:12px;color:var(--grey);max-width:380px;line-height:1.9}
+
+/* cta strip */
+.cta-strip{border-top:1px solid var(--line);background:var(--black);padding:clamp(90px,14vh,160px) 0;text-align:center}
+.cta-strip .display{font-size:clamp(32px,4.6vw,64px);margin-top:26px}
+.cta-strip a{
+  margin-top:44px;display:inline-block;text-decoration:none;
+  font-size:11px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--white);
+  border-bottom:1px solid var(--accent);padding-bottom:12px;transition:color .4s;
+}
+.cta-strip a:hover{color:var(--accent)}
+
+footer{background:var(--black);border-top:1px solid var(--line);padding:44px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.foot .label{letter-spacing:.3em}
+.foot-credit{margin-top:28px;padding-top:28px;border-top:1px solid var(--line);text-align:center;font-size:11px;color:var(--grey)}
+.foot-credit a{color:var(--grey);text-decoration:underline;text-underline-offset:3px;transition:color .3s}
+.foot-credit a:hover{color:var(--accent)}
+
+@media(max-width:1000px){
+  .proj,.proj.third{grid-column:span 12}
+  .proj.wide .thumb{aspect-ratio:16/9}
+  .count{margin-left:0;width:100%}
+}
+@media(max-width:720px){
+  .menu{display:none}
+  .menu.open{display:flex;position:fixed;inset:0;top:72px;background:rgba(20,20,20,.98);flex-direction:column;align-items:flex-start;padding:50px clamp(24px,5vw,80px);gap:34px}
+  .burger{display:block}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo">ONEMAN<span>CREW</span></a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html#aanpak">Aanpak</a></li>
+      <li><a href="index.html#jaarplan">Jaarplan</a></li>
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="projecten.html" class="active">Projecten</a></li>
+      <li><a href="over.html">Over</a></li>
+      <li><a href="contact.html" class="cta">Plan een gesprek</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="label oj rv in">Projecten</span>
+    <h1 class="display rv in">Werk dat<br><b>agenda's</b> <em>vulde.</em></h1>
+    <p class="body rv in">Een selectie uit recente producties. Elk project begon met een probleem en eindigde met resultaat. Klik op een project om de video te bekijken.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="filters rv">
+      <span class="fl">Filter</span>
+      <button class="fbtn on" data-f="all">Alles</button>
+      <button class="fbtn" data-f="aftermovie">Aftermovies</button>
+      <button class="fbtn" data-f="bedrijf">Bedrijfsvideo's</button>
+      <button class="fbtn" data-f="social">Social</button>
+      <span class="count"><b id="cnt">4</b> projecten</span>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <article class="proj wide rv" data-cat="aftermovie" data-title="Kotlin Dev Day — Aftermovie" data-video="video/Aftermovie_Kotlin_Websize.mp4">
+        <div class="thumb"><img class="ph ph-img" src="thumbnail/Thumbnail_Kotlin.png" alt="" loading="lazy"><div class="play"><i></i></div></div>
+        <div class="pmeta"><h3>Kotlin Dev Day</h3><span class="cat">Aftermovie</span></div>
+        <p class="pdesc">Aftermovie van Kotlin Dev Day: de energie en sfeer van de developersconferentie vastgelegd voor de volgende editie.</p>
+      </article>
+
+      <article class="proj third rv" data-cat="aftermovie" data-title="TopsportGala — Aftermovie 2025" data-video="video/Aftermovie_Gala_Websize.mp4">
+        <div class="thumb"><img class="ph ph-img" src="thumbnail/Thumbnail_TopsportGala.png" alt="" loading="lazy"><div class="play"><i></i></div></div>
+        <div class="pmeta"><h3>TopsportGala 2025</h3><span class="cat">Aftermovie</span></div>
+        <p class="pdesc">Aftermovie van het jaarlijkse TopsportGala, gefilmd voor gebruik in de campagne van het volgende seizoen.</p>
+      </article>
+
+      <article class="proj third rv" data-cat="bedrijf" data-title="KKNH — Venue Promotiefilm" data-video="video/Promotievideo_KKNH_Websize.mp4">
+        <div class="thumb"><img class="ph ph-img" src="thumbnail/Thumbnail_KKNH.png" alt="" loading="lazy"><div class="play"><i></i></div></div>
+        <div class="pmeta"><h3>KKNH</h3><span class="cat">Venue promotiefilm</span></div>
+        <p class="pdesc">Promotiefilm van de locatie zelf: zalen en faciliteiten cinematisch in beeld voor eventplanners.</p>
+      </article>
+
+      <article class="proj third rv" data-cat="social" data-title="Event Venue — Social Highlight" data-video="video/Onboarding_Mileway_Websize.mp4">
+        <div class="thumb"><img class="ph ph-img" src="thumbnail/Thumbnail_Mileway.png" alt="" loading="lazy"><div class="play"><i></i></div></div>
+        <div class="pmeta"><h3>Event Venue</h3><span class="cat">Social</span></div>
+        <p class="pdesc">Korte social content, geknipt voor doorlopende zichtbaarheid op LinkedIn en Instagram.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Videospeler">
+  <div class="modal-in">
+    <div class="modal-top">
+      <h3 id="mTitle">Project</h3>
+      <button class="modal-close" onclick="closeModal()">Sluiten ✕</button>
+    </div>
+    <div class="modal-video" id="mVideo">
+      <div class="empty">
+        <span class="label oj">Video volgt</span>
+        <p>Voeg in de code een YouTube of Vimeo link toe aan dit project via het data-video attribuut, dan speelt de video hier automatisch af.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cta-strip">
+  <div class="wrap rv">
+    <span class="label oj">Volgend project</span>
+    <h2 class="display">Jouw locatie als <em>volgende case?</em></h2>
+    <a href="contact.html">Plan een gesprek</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span class="label">Onemancrew</span>
+      <span class="label">Videografie voor evenementenlocaties</span>
+      <span class="label">© 2026 · onemancrew.nl</span>
+    </div>
+    <div class="foot-credit">Website gemaakt door <a href="https://brand-on.org" target="_blank" rel="noopener">brand-on.org</a> · Ook een gratis demo voor jouw website? <a href="https://brand-on.org" target="_blank" rel="noopener">Vraag 'm aan</a></div>
+  </div>
+</footer>
+
+<script>
+// reveals
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// filters
+const btns=document.querySelectorAll('.fbtn'),projs=document.querySelectorAll('.proj'),cnt=document.getElementById('cnt');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;let n=0;
+  projs.forEach(p=>{
+    const show=f==='all'||p.dataset.cat===f;
+    p.classList.toggle('hide',!show);if(show)n++;
+  });
+  cnt.textContent=n;
+}));
+
+// modal
+const modal=document.getElementById('modal'),mTitle=document.getElementById('mTitle'),mVideo=document.getElementById('mVideo');
+const emptyHTML=mVideo.innerHTML;
+projs.forEach(p=>p.addEventListener('click',()=>{
+  mTitle.textContent=p.dataset.title;
+  const v=p.dataset.video;
+  if(!v){ mVideo.innerHTML=emptyHTML; }
+  else if(/youtube|vimeo/.test(v)){
+    mVideo.innerHTML=`<iframe src="${v}" allow="autoplay; fullscreen" allowfullscreen title="${p.dataset.title}"></iframe>`;
+  }else{
+    mVideo.innerHTML=`<video src="${v}" controls autoplay playsinline title="${p.dataset.title}"></video>`;
+  }
+  modal.classList.add('open');document.body.style.overflow='hidden';
+}));
+function closeModal(){modal.classList.remove('open');mVideo.innerHTML=emptyHTML;document.body.style.overflow=''}
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+</script>
+</body>
+</html>
